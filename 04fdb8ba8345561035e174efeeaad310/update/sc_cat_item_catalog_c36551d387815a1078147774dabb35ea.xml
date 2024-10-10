@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_catalog">
+    <sc_cat_item_catalog action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Record Producer for Prospective Renters">6fef401f8305d61035e174efeeaad382</sc_cat_item>
+        <sc_catalog display_value="Field Service Catalog">ec8b4f41df3031007a6d888f6bf2634f</sc_catalog>
+        <sys_class_name>sc_cat_item_catalog</sys_class_name>
+        <sys_created_by>nakul</sys_created_by>
+        <sys_created_on>2024-10-10 02:15:05</sys_created_on>
+        <sys_id>c36551d387815a1078147774dabb35ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Field Service Catalog.Record Producer for Prospective Renters</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sc_cat_item_catalog_c36551d387815a1078147774dabb35ea</sys_update_name>
+        <sys_updated_by>nakul</sys_updated_by>
+        <sys_updated_on>2024-10-10 02:15:05</sys_updated_on>
+    </sc_cat_item_catalog>
+</record_update>

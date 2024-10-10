@@ -56,9 +56,8 @@
         <record/>
         <record_producer_table>sn_customerservice_case</record_producer_table>
         <reference>csm_consumer</reference>
-        <reference_qual>userDYNAMIC90d1921e5f510100a9ad2572f2b477fe</reference_qual>
-        <reference_qual_condition table="csm_consumer">userDYNAMIC90d1921e5f510100a9ad2572f2b477fe<item endquery="false" field="user" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
-        </reference_qual_condition>
+        <reference_qual/>
+        <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
         <save_script><![CDATA[/** This script is executed before the Record is generated
@@ -78,14 +77,14 @@
         <sys_created_by>nakul</sys_created_by>
         <sys_created_on>2024-10-09 21:38:03</sys_created_on>
         <sys_id>b90510938345d61035e174efeeaad37f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Requested for?</sys_name>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
         <sys_update_name>item_option_new_b90510938345d61035e174efeeaad37f</sys_update_name>
         <sys_updated_by>nakul</sys_updated_by>
-        <sys_updated_on>2024-10-09 22:04:31</sys_updated_on>
+        <sys_updated_on>2024-10-10 02:44:30</sys_updated_on>
         <table/>
         <tooltip/>
         <type>8</type>
