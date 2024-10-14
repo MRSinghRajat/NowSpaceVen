@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="cmn_location" version="2" view="workspace-now-space-0">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Location - Workspace Now Space 0" name="cmn_location" related_list="NULL" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">87e063cf8301d61035e174efeeaad3e9</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>cmn_location.parent</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:06</sys_created_on>
+            <sys_id>43e063cf8301d61035e174efeeaad3ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:06</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Location - Workspace Now Space 0</calculated_name>
+            <filter/>
+            <name>cmn_location</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:06</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>87e063cf8301d61035e174efeeaad3e9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Location - Workspace Now Space 0</sys_name>
+            <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+            <sys_update_name>sys_ui_related_cmn_location_workspace-now-space-0</sys_update_name>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:06</sys_updated_on>
+            <sys_user/>
+            <view display_value="Workspace Now Space 0" name="workspace-now-space-0">bfd0eb8ff401d61059c6b024e7ece25c</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

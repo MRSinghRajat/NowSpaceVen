@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Related Records" section_id="7ee063cf8301d61035e174efeeaad319" sys_domain="global" table="sn_customerservice_case" version="3" view="workspace-now-space-0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_id>bae063cf8301d61035e174efeeaad328</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ee063cf8301d61035e174efeeaad319</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>problem</element>
+            <position>1</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_id>bae063cf8301d61035e174efeeaad32a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ee063cf8301d61035e174efeeaad319</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>post_case_review</element>
+            <position>2</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_id>b2e063cf8301d61035e174efeeaad329</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ee063cf8301d61035e174efeeaad319</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_id>b2e063cf8301d61035e174efeeaad32b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ee063cf8301d61035e174efeeaad319</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>change</element>
+            <position>4</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_id>bae063cf8301d61035e174efeeaad329</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ee063cf8301d61035e174efeeaad319</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>caused_by</element>
+            <position>5</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_id>bae063cf8301d61035e174efeeaad32b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ee063cf8301d61035e174efeeaad319</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>case_action_summary</element>
+            <position>6</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_id>b2e063cf8301d61035e174efeeaad328</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ee063cf8301d61035e174efeeaad319</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>7</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_id>b2e063cf8301d61035e174efeeaad32a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ee063cf8301d61035e174efeeaad319</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Related Records</caption>
+            <header>false</header>
+            <name>sn_customerservice_case</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7ee063cf8301d61035e174efeeaad319</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_customerservice_case</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+            <sys_update_name>sys_ui_section_7ee063cf8301d61035e174efeeaad319</sys_update_name>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Workspace Now Space 0" name="workspace-now-space-0">bfd0eb8ff401d61059c6b024e7ece25c</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

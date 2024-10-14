@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+    // Data for the steps
+    $scope.data = {
+        steps: [
+            { title: "Discover House", icon: "fa-home" },
+            { title: "Schedule to Visit", icon: "fa-calendar" },
+            { title: "Hassle-Free Purchase", icon: "fa-briefcase" },
+            { title: "Buyback Guarantee", icon: "fa-check" }
+        ]
+    };
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Wrapper for consistent layout */
+.wrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    background: url('landing.png') no-repeat center center/cover;
+    padding: 40px;
+    text-align: center;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.how-it-works-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.step-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    position: relative;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    z-index: 2;
+    opacity: 0.5; /* Initially semi-transparent */
+    transition: opacity 0.5s ease;
+}
+
+.step .icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+.step h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/
+
+/* Animation for steps highlighting */
+.step:nth-child(1) {
+    animation: highlightStep 1s ease forwards 0.5s;
+}
+
+.step:nth-child(2) {
+    animation: highlightStep 1s ease forwards 1.5s;
+}
+
+.step:nth-child(3) {
+    animation: highlightStep 1s ease forwards 2.5s;
+}
+
+.step:nth-child(4) {
+    animation: highlightStep 1s ease forwards 3.5s;
+}
+
+@keyframes highlightStep {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Testimonials Section */
+.gtco-testimonials {
+    position: relative;
+    margin-top: 180px;
+    text-align: center;
+}
+
+.gtco-testimonials h2 {
+    font-size: 30px;
+    color: #333333;
+    margin-bottom: 50px;
+}
+
+.owl-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.owl-carousel .card {
+    background: #fff;
+    box-shadow: 0 8px 30px -7px #c9dff0;
+    padding: 0 10px;
+    border-radius: 20px;
+    border: 0;
+    flex: 1 1 300px; /* Allow items to grow and shrink as needed with a minimum width of 300px */
+    max-width: 300px;
+    margin: 0 10px;
+}
+
+.owl-carousel .card-img-top {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 15px auto 0;
+    box-shadow: 0 8px 20px -4px #95abbb;
+    width: 100px;
+    height: 100px;
+}
+
+.owl-carousel h5 {
+    color: #01b0f8;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.owl
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>NowSpace how it works</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 20:50:24</sys_created_on>
+        <sys_id>1b0b089f87c91a1078147774dabb354a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>NowSpace how it works</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_widget_1b0b089f87c91a1078147774dabb354a</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 20:54:31</sys_updated_on>
+        <template><![CDATA[<div class="wrapper">
+    <!-- New Section: How It Works -->
+    <div class="how-it-works-section">
+        <h2>How It Works</h2>
+        <div class="steps-container">
+            <div class="step-container">
+                <!-- Step 1: Discover House -->
+                <div class="step">
+                    <div class="icon-box">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <h4>Discover House</h4>
+                </div>
+
+                <!-- Step 2: Schedule to Visit -->
+                <div class="step">
+                    <div class="icon-box">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <h4>Schedule to Visit</h4>
+                </div>
+
+                <!-- Step 3: Hassle-Free Purchase -->
+                <div class="step">
+                    <div class="icon-box">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                    <h4>Hassle-Free Purchase</h4>
+                </div>
+
+                <!-- Step 4: Buyback Guarantee -->
+                <div class="step">
+                    <div class="icon-box">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <h4>Buyback Guarantee</h4>
+                </div>
+
+                <!-- Line connecting steps -->
+               
+            </div>
+        </div>
+        
+        <!-- Testimonials Section -->
+        <div class="gtco-testimonials">
+            <h2>What Others are Saying?</h2>
+            <div class="owl-carousel owl-carousel1 owl-theme">
+                <div>
+                    <div class="card text-center">
+                        <img class="card-img-top" src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300" alt="">
+                        <div class="card-body">
+                            <h5>Ronne Galle <br />
+                                <span> Project Manager </span>
+                            </h5>
+                            <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat ”</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card text-center">
+                        <img class="card-img-top" src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301" alt="">
+                        <div class="card-body">
+                            <h5>Missy Limana<br />
+                                <span> Engineer </span>
+                            </h5>
+                            <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat ”</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div>
+                    <div class="card text-center">
+                        <img class="card-img-top" src="https://images.unsplash.com/photo-1549836938-d278c5d46d20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=303" alt="">
+                        <div class="card-body">
+                            <h5>Hanna Lisem<br />
+                                <span> Project Manager </span>
+                            </h5>
+                            <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat ”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FontAwesome (Optional for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>1b0b089f87c91a1078147774dabb354a</id>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 20:50:23</sys_created_on>
+        <sys_id>e61b885f87c91a1078147774dabb35e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 20:50:23</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

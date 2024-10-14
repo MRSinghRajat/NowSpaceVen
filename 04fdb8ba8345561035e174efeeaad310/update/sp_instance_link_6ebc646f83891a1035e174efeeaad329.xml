@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph>comments</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="2">18fc5ca383491a1035e174efeeaad37c</sp_column>
+        <sp_page/>
+        <sp_widget display_value="NowSpace IconLink">1aca6c6b83891a1035e174efeeaad3fc</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 17:55:46</sys_created_on>
+        <sys_id>6ebc646f83891a1035e174efeeaad329</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Ask Community</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_instance_link_6ebc646f83891a1035e174efeeaad329</sys_update_name>
+        <sys_updated_by>nakul</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:00:47</sys_updated_on>
+        <title>Ask Community</title>
+        <type>page</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Top Icon",
+		"displayValue": "Top Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="delete_multiple" query="documentkey=6ebc646f83891a1035e174efeeaad329"/>
+</record_update>

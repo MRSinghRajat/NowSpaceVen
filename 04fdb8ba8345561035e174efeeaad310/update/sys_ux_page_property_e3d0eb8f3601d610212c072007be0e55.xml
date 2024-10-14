@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <name>listConfigId</name>
+        <page display_value="Now Space">37d0eb8fa501d610727d4811b93cfd67</page>
+        <required_translations>[]</required_translations>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 17:45:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>e3d0eb8f3601d610212c072007be0e55</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>listConfigId</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sys_ux_page_property_e3d0eb8f3601d610212c072007be0e55</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 17:45:57</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_pamtn_now_space.37d0eb8fa501d610727d4811b93cfd67.root.global.listConfigId</unique_name>
+        <value>fce02f8f8301d61035e174efeeaad3a6</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=e3d0eb8f3601d610212c072007be0e55"/>
+</record_update>

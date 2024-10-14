@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>3</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">bf80c0038785d61078147774dabb351e</sp_column>
+        <sp_widget display_value="Relevant for you">6cc836d0dbf700500c209493db961914</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 01:25:51</sys_created_on>
+        <sys_id>8090c0038785d61078147774dabb3540</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_instance_8090c0038785d61078147774dabb3540</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 01:25:51</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"user_prediction_count": {
+		"value": null,
+		"displayValue": ""
+	},
+	"recent_activity_cut_off_in_days": {
+		"value": null,
+		"displayValue": ""
+	},
+	"title": {
+		"value": "",
+		"displayValue": ""
+	},
+	"limit": {
+		"value": 3,
+		"displayValue": "3"
+	},
+	"category": {
+		"value": "knowledge and catalog",
+		"displayValue": "knowledge and catalog"
+	},
+	"list_type": {
+		"value": "Card List",
+		"displayValue": "Card List"
+	},
+	"card_behaviour": {
+		"value": "single",
+		"displayValue": "single"
+	},
+	"load_config": {
+		"value": "async",
+		"displayValue": "Asynchronous"
+	},
+	"show_empty_state": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=8090c0038785d61078147774dabb3540"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Space">04fdb8ba8345561035e174efeeaad310</application>
+        <file_path/>
+        <instance_id>cf03ca63ebc0d250e483f459bad0cd70</instance_id>
+        <instance_name>ven07370</instance_name>
+        <name>sp_instance_8090c0038785d61078147774dabb3540</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;3&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;bf80c0038785d61078147774dabb351e&lt;/sp_column&gt;&lt;sp_widget display_value="Relevant for you"&gt;6cc836d0dbf700500c209493db961914&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;rajat&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-10-09 01:25:51&lt;/sys_created_on&gt;&lt;sys_id&gt;8090c0038785d61078147774dabb3540&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="Now Space" source="x_pamtn_now_space"&gt;04fdb8ba8345561035e174efeeaad310&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Now Space"&gt;04fdb8ba8345561035e174efeeaad310&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_8090c0038785d61078147774dabb3540&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;rajat&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-10-09 01:25:51&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"user_prediction_count": {
+		"value": null,
+		"displayValue": ""
+	},
+	"recent_activity_cut_off_in_days": {
+		"value": null,
+		"displayValue": ""
+	},
+	"title": {
+		"value": "",
+		"displayValue": ""
+	},
+	"limit": {
+		"value": 3,
+		"displayValue": "3"
+	},
+	"category": {
+		"value": "knowledge and catalog",
+		"displayValue": "knowledge and catalog"
+	},
+	"list_type": {
+		"value": "Card List",
+		"displayValue": "Card List"
+	},
+	"card_behaviour": {
+		"value": "single",
+		"displayValue": "single"
+	},
+	"load_config": {
+		"value": "async",
+		"displayValue": "Asynchronous"
+	},
+	"show_empty_state": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=8090c0038785d61078147774dabb3540"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-602593711</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>48fdb8ba8345561035e174efeeaad314</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 01:25:51</sys_created_on>
+        <sys_id>c490c0038785d61078147774dabb3542</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1926ee1e5f70000001</sys_recorded_at>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 01:25:51</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>c890c0036a85d6109455b7fd28cc3741</update_guid>
+        <update_guid_history>c890c0036a85d6109455b7fd28cc3741:-602593711</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">2c41b8a783c91a1035e174efeeaad3d1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 18:15:34</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>7728b47b686e4ea68fc56b5162d564a1</sys_id>
+        <sys_metadata>8090c0038785d61078147774dabb3540</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_scope_delete display_value="">3968138c0ac74935be7147581295b391</sys_scope_delete>
+        <sys_update_name>sp_instance_8090c0038785d61078147774dabb3540</sys_update_name>
+        <sys_update_version display_value="sp_instance_8090c0038785d61078147774dabb3540">c490c0038785d61078147774dabb3542</sys_update_version>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:15:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

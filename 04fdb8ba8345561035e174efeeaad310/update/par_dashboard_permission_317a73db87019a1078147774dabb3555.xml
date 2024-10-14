@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>true</can_share>
+        <can_write>true</can_write>
+        <dashboard display_value="Agent Dashboard">b17aff5b87019a1078147774dabb35c7</dashboard>
+        <group/>
+        <owner>true</owner>
+        <role/>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 14:16:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>317a73db87019a1078147774dabb3555</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>b17aff5b87019a1078147774dabb35c7</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>par_dashboard_permission_317a73db87019a1078147774dabb3555</sys_update_name>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 14:16:10</sys_updated_on>
+        <user display_value="Petchiammal Iyyappan">158a98191b491e10a2a61f4d2b4bcb49</user>
+    </par_dashboard_permission>
+</record_update>

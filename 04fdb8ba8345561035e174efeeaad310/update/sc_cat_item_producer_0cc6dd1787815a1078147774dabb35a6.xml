@@ -31,7 +31,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>Record Producer for Current Renters</name>
+        <name>Submit a Request (Tenant)</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -59,7 +59,7 @@
         <price>0</price>
         <published_ref/>
         <recurring_frequency/>
-        <redirect_url>generated_record</redirect_url>
+        <redirect_url>catalog_home</redirect_url>
         <request_method/>
         <roles/>
         <save_options/>
@@ -127,14 +127,14 @@
         <sys_created_by>nakul</sys_created_by>
         <sys_created_on>2024-10-10 02:23:08</sys_created_on>
         <sys_id>0cc6dd1787815a1078147774dabb35a6</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>Record Producer for Current Renters</sys_name>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Submit a Request (Tenant)</sys_name>
         <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
         <sys_policy/>
         <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
         <sys_update_name>sc_cat_item_producer_0cc6dd1787815a1078147774dabb35a6</sys_update_name>
-        <sys_updated_by>nakul</sys_updated_by>
-        <sys_updated_on>2024-10-10 13:59:42</sys_updated_on>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 17:53:56</sys_updated_on>
         <table_name>sn_customerservice_case</table_name>
         <taxonomy_topic/>
         <template/>
@@ -142,7 +142,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>11</version>
+        <version>19</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

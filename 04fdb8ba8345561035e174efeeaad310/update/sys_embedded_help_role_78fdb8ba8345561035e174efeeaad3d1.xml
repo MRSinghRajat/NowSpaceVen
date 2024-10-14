@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_pamtn_now_space.agent" name="x_pamtn_now_space.agent">f0fdb8ba8345561035e174efeeaad3cf</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-08 11:15:34</sys_created_on>
+        <sys_id>78fdb8ba8345561035e174efeeaad3d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>f0fdb8ba8345561035e174efeeaad3cf</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sys_embedded_help_role_78fdb8ba8345561035e174efeeaad3d1</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-08 11:15:34</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

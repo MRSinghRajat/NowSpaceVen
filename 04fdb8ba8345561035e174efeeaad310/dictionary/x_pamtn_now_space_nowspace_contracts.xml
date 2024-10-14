@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="20e4bb8f8381d61035e174efeeaad3c7" extends="ast_contract" label="NowSpace Contracts" max_length="40" name="x_pamtn_now_space_nowspace_contracts" type="collection">
+        <element label="NowSpace Property" max_length="32" name="nowspace_property" reference="x_pamtn_now_space_nowspace_property_listing" type="reference"/>
+        <index name="index">
+            <element name="nowspace_property"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_config display_value="Now Space App Config">f7d0eb8f2b01d610dd8b64d66c5d2066</app_config>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <event_mappings/>
+        <macroponent display_value="Knowledge View">3094297373311010b29f2e46fbf6a7a1</macroponent>
+        <macroponent_config>{&#13;
+  "label" : "",&#13;
+  "bare" : true,&#13;
+  "scrollable" : "y",&#13;
+  "headerLevel" : "1",&#13;
+  "interceptNotifications" : false,&#13;
+  "propagateNotifications" : false,&#13;
+  "views" : "",&#13;
+  "selectedTabIndex" : 0,&#13;
+  "table" : "",&#13;
+  "sysId" : ""&#13;
+}</macroponent_config>
+        <name>KB default</name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="KB">a7d0eb8fb601d610de82488afbaa9d58</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 17:45:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>63d0eb8f9f01d610013c987b9cce6154</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KB default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sys_ux_screen_63d0eb8f9f01d610013c987b9cce6154</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 17:45:53</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=63d0eb8f9f01d610013c987b9cce6154"/>
+</record_update>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="DELETE">
+        <alternate_portal/>
+        <css_variables/>
+        <dark_theme/>
+        <default>false</default>
+        <enable_ais>true</enable_ais>
+        <enable_certificate_based_authentication>false</enable_certificate_based_authentication>
+        <enable_favorites>false</enable_favorites>
+        <hide_portal_name>false</hide_portal_name>
+        <homepage display_value="nowpsace_ec_home">3b800c8f8745d61078147774dabb3562</homepage>
+        <icon/>
+        <inactive>false</inactive>
+        <kb_knowledge_base/>
+        <kb_knowledge_page display_value="esc_knowledge_home">f8b574a0b7202300d0ac9277ee11a91d</kb_knowledge_page>
+        <login_page display_value="login">6995a144cb11120000f8d856634c9c25</login_page>
+        <logo/>
+        <notfound_page/>
+        <quick_start_config/>
+        <rtl_enabled>false</rtl_enabled>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <search_application display_value="Service Portal Default Search Application">00731b9d5b231010d9a5ce1a8581c7dd</search_application>
+        <search_results_configuration display_value="Service Portal Search">80eb579d53671010968addeeff7b1215</search_results_configuration>
+        <sp_chat_queue/>
+        <sp_rectangle_menu display_value="CSP Header Menu">c8674194c3221200f3897bfaa2d3aec4</sp_rectangle_menu>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 14:42:20</sys_created_on>
+        <sys_id>4550cc2383851a1035e174efeeaad3e3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>NowSpace1</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_portal_4550cc2383851a1035e174efeeaad3e3</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 14:43:03</sys_updated_on>
+        <theme display_value="EC Theme">9b6f06d71bb8f85047582171604bcb9c</theme>
+        <title>NowSpace1</title>
+        <ts_index_group/>
+        <url_suffix>space</url_suffix>
+        <user_registration_config/>
+    </sp_portal>
+    <sys_translated_text action="DELETE" query="documentkey=4550cc2383851a1035e174efeeaad3e3"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Space">04fdb8ba8345561035e174efeeaad310</application>
+        <file_path/>
+        <instance_id>cf03ca63ebc0d250e483f459bad0cd70</instance_id>
+        <instance_name>ven07370</instance_name>
+        <name>sp_portal_4550cc2383851a1035e174efeeaad3e3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal"><sp_portal action="INSERT_OR_UPDATE"><alternate_portal/><css_variables/><dark_theme/><default>false</default><enable_ais>true</enable_ais><enable_certificate_based_authentication>false</enable_certificate_based_authentication><enable_favorites>false</enable_favorites><hide_portal_name>false</hide_portal_name><homepage display_value="nowpsace_ec_home">3b800c8f8745d61078147774dabb3562</homepage><icon/><inactive>false</inactive><kb_knowledge_base/><kb_knowledge_page display_value="esc_knowledge_home">f8b574a0b7202300d0ac9277ee11a91d</kb_knowledge_page><login_page display_value="login">6995a144cb11120000f8d856634c9c25</login_page><logo/><notfound_page/><quick_start_config/><rtl_enabled>false</rtl_enabled><sc_catalog/><sc_catalog_page/><sc_category_page/><search_application display_value="Service Portal Default Search Application">00731b9d5b231010d9a5ce1a8581c7dd</search_application><search_results_configuration display_value="Service Portal Search">80eb579d53671010968addeeff7b1215</search_results_configuration><sp_chat_queue/><sp_rectangle_menu display_value="CSP Header Menu">c8674194c3221200f3897bfaa2d3aec4</sp_rectangle_menu><sys_class_name>sp_portal</sys_class_name><sys_created_by>rajat</sys_created_by><sys_created_on>2024-10-10 14:42:20</sys_created_on><sys_id>4550cc2383851a1035e174efeeaad3e3</sys_id><sys_mod_count>2</sys_mod_count><sys_name>NowSpace1</sys_name><sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package><sys_policy/><sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope><sys_update_name>sp_portal_4550cc2383851a1035e174efeeaad3e3</sys_update_name><sys_updated_by>rajat</sys_updated_by><sys_updated_on>2024-10-10 14:43:03</sys_updated_on><theme display_value="EC Theme">9b6f06d71bb8f85047582171604bcb9c</theme><title>NowSpace1</title><ts_index_group/><url_suffix>space</url_suffix><user_registration_config/></sp_portal><sys_translated_text action="delete_multiple" query="documentkey=4550cc2383851a1035e174efeeaad3e3"/></record_update>]]></payload>
+        <payload_hash>275891423</payload_hash>
+        <record_name>NowSpace1</record_name>
+        <reverted_from/>
+        <source>48fdb8ba8345561035e174efeeaad314</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 14:43:03</sys_created_on>
+        <sys_id>ef9000a383851a1035e174efeeaad3c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19276e21f2e0000001</sys_recorded_at>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 14:43:03</sys_updated_on>
+        <type>Service Portal</type>
+        <update_guid>a79000a354851a10da6db67848f0cfc4</update_guid>
+        <update_guid_history>a79000a354851a10da6db67848f0cfc4:275891423,ea704c63fd851a10d35db7c5fa9002e0:248216998,8d704c63fe851a108d0279d6dd91a32b:785650132</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="NowSpace1">7091cce383851a1035e174efeeaad3e2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 14:47:15</sys_created_on>
+        <sys_db_object display_value="" name="sp_portal">sp_portal</sys_db_object>
+        <sys_id>7f4dfec33ad84d678be4576d1143a481</sys_id>
+        <sys_metadata>4550cc2383851a1035e174efeeaad3e3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NowSpace1</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_scope_delete display_value="">3968138c0ac74935be7147581295b391</sys_scope_delete>
+        <sys_update_name>sp_portal_4550cc2383851a1035e174efeeaad3e3</sys_update_name>
+        <sys_update_version display_value="sp_portal_4550cc2383851a1035e174efeeaad3e3">ef9000a383851a1035e174efeeaad3c4</sys_update_version>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 14:47:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

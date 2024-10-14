@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e0a03b4b8381d61035e174efeeaad343" label="NowSpace Property Listing" max_length="40" name="x_pamtn_now_space_nowspace_property_listing" type="collection">
+        <element label="Current Renter" max_length="32" name="current_renter" reference="csm_consumer" type="reference"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Primary Internal Contract" max_length="32" name="primary_internal_contract" reference="sys_user" type="reference"/>
+        <element choice="1" label="Building Category" max_length="40" name="building_category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Studios" sequence="3" value="Studio"/>
+                <element inactive_on_update="false" label="Other" sequence="100" value="Other"/>
+                <element inactive_on_update="false" label="Single-Family Home" sequence="1" value="Single-Family Home"/>
+                <element inactive_on_update="false" label="Condominium" sequence="2" value="Condominium"/>
+                <element inactive_on_update="false" label="Apartment" sequence="0" value="Apartment"/>
+            </choice>
+        </element>
+        <element label="Landlord" max_length="32" name="landlord" reference="customer_account" type="reference"/>
+        <element label="Address" max_length="32" name="address" reference="cmn_location" type="reference"/>
+        <index name="index">
+            <element name="address"/>
+        </index>
+        <index name="index2">
+            <element name="current_renter"/>
+        </index>
+        <index name="index3">
+            <element name="landlord"/>
+        </index>
+        <index name="index4">
+            <element name="primary_internal_contract"/>
+        </index>
+    </element>
+</database>

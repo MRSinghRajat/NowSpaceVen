@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">3bd0eb8f8101d610d82c964431aeaf5f</canvas>
+        <component display_value="List - Simple">2b1c080881e05dc63b917044290b233f</component>
+        <component_props>{"table":"x_pamtn_now_space_nowspace_contracts","columnPreferenceKey":"","fixedQuery":"","followFilters":true,"listTitle":"NowSpace Contracts/Agreements","columns":"","query":"active=true","groupByField":"","hideViewAll":false,"hideHighlightedValues":false,"showBorder":false,"bare":true,"highlightedValueConfigId":"","hideHighlightContent":false,"highlightContent":{"patterns":[],"color":""},"hideLinks":false,"nrlLandmark":true,"wordWrap":false,"overrideWordWrapUserPref":false,"maxCharLimit":4000,"hideEmptyStateImage":false,"hidePersonalization":false,"hideDotwalk":false,"hideColumnReorder":false,"hideRowSelector":false,"hideColumnGrouping":false,"hideColumnResizing":false,"hideColumnFiltering":false,"hideColumnSorting":false,"hideHeader":false,"hideTitle":false,"hideTitleRowCount":false,"hideLastRefreshedText":false,"hideRefreshButton":false,"hideInlineEditing":false,"isDashboard":true,"id":"listTitle","value":"NowSpace Contracts/Agreements","noDebounce":true,"propLabel":"Title"}</component_props>
+        <h>13</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 14:48:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5ae1842387819a1078147774dabb355d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>par_dashboard_widget_5ae1842387819a1078147774dabb355d</sys_update_name>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 15:22:06</sys_updated_on>
+        <visualization/>
+        <w>48</w>
+        <widget_props/>
+        <x>0</x>
+        <y>25</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Space">04fdb8ba8345561035e174efeeaad310</application>
+        <file_path/>
+        <instance_id>cf03ca63ebc0d250e483f459bad0cd70</instance_id>
+        <instance_name>ven07370</instance_name>
+        <name>par_dashboard_widget_5ae1842387819a1078147774dabb355d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">3bd0eb8f8101d610d82c964431aeaf5f</canvas><component display_value="List - Simple">2b1c080881e05dc63b917044290b233f</component><component_props>{"table":"x_pamtn_now_space_nowspace_contracts","columnPreferenceKey":"","fixedQuery":"","followFilters":true,"listTitle":"NowSpace Contracts/Agreements","columns":"","query":"active=true","groupByField":"","hideViewAll":false,"hideHighlightedValues":false,"showBorder":false,"bare":true,"highlightedValueConfigId":"","hideHighlightContent":false,"highlightContent":{"patterns":[],"color":""},"hideLinks":false,"nrlLandmark":true,"wordWrap":false,"overrideWordWrapUserPref":false,"maxCharLimit":4000,"hideEmptyStateImage":false,"hidePersonalization":false,"hideDotwalk":false,"hideColumnReorder":false,"hideRowSelector":false,"hideColumnGrouping":false,"hideColumnResizing":false,"hideColumnFiltering":false,"hideColumnSorting":false,"hideHeader":false,"hideTitle":false,"hideTitleRowCount":false,"hideLastRefreshedText":false,"hideRefreshButton":false,"hideInlineEditing":false,"isDashboard":true,"id":"listTitle","value":"NowSpace Contracts/Agreements","noDebounce":true,"propLabel":"Title"}</component_props><h>13</h><name/><stored_component/><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>Petchiammal</sys_created_by><sys_created_on>2024-10-10 14:48:42</sys_created_on><sys_domain>global</sys_domain><sys_id>5ae1842387819a1078147774dabb355d</sys_id><sys_mod_count>2</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package><sys_policy/><sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope><sys_update_name>par_dashboard_widget_5ae1842387819a1078147774dabb355d</sys_update_name><sys_updated_by>Petchiammal</sys_updated_by><sys_updated_on>2024-10-10 15:22:06</sys_updated_on><visualization/><w>48</w><widget_props/><x>0</x><y>25</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>-1760444233</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>48fdb8ba8345561035e174efeeaad314</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 15:22:06</sys_created_on>
+        <sys_id>a789c46f87819a1078147774dabb3542</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1927705de360000001</sys_recorded_at>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 15:22:06</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>6f89c46f5c819a100153382c11d14041</update_guid>
+        <update_guid_history>6f89c46f5c819a100153382c11d14041:-1760444233,5c72cca352819a10fe807905f65fe871:-2003722150,16e184239a819a104bc39069a213c160:560386706</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">c87a0caf87819a1078147774dabb35b1</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 15:25:58</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>72cb055b78a146eaa9ade2a9a3a264a1</sys_id>
+        <sys_metadata>5ae1842387819a1078147774dabb355d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_scope_delete display_value="">3968138c0ac74935be7147581295b391</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_5ae1842387819a1078147774dabb355d</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_5ae1842387819a1078147774dabb355d">a789c46f87819a1078147774dabb3542</sys_update_version>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 15:25:58</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

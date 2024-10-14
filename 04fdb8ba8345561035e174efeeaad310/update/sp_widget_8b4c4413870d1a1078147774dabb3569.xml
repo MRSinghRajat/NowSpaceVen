@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+  var c = this;
+  
+  // Options for the dropdowns
+  c.homeTypes = ['New home', 'Old home', 'Apartment', 'Condo'];
+  c.roomOptions = ['1 room', '2 rooms', '3 rooms', '4 rooms'];
+  c.priceRanges = ['$100,000 - $300,000', '$300,000 - $500,000', '$500,000 - $700,000', '$700,000 - $1,000,000'];
+
+  c.selectedOption = 'buy'; // Default selected option
+  
+  c.selectOption = function(option) {
+    c.selectedOption = option;
+  };
+  
+  c.showOnMap = function() {
+    // Logic to show the map based on the location
+    alert("Showing map for: " + c.location);
+  };
+  
+  c.searchProperties = function() {
+    // Logic to handle search functionality
+    alert("Searching properties for: " + c.homeType + ", " + c.rooms + ", " + c.priceRange + " in " + c.location);
+  };
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.real-estate-search-container {
+  position: relative;
+  text-align: left;
+  padding: 200px 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  color: black;
+  overflow: hidden;
+  height: 500px;
+}
+
+/* Wrapper around content to provide transparency */
+.content-wrapper {
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  z-index: 2; /* Ensure this is on top of the video */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-width:fit-content;
+}
+
+.video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Keep this lower than the content wrapper */
+}
+
+#backgroundVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+}
+ .real-estate-search-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 4rem;
+    /* text-shadow: .1rem .1rem .4rem rgba(0, 0, 0, .7); */
+    z-index: 1;
+    position: relative;
+    font-size: -webkit-xxx-large;
+    font-family: 'circular';
+}
+
+.search-bar-wrapper {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  margin-top: 20px; /* Optional: Additional space above the search bar section */
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  position: sticky;
+  top: -15px;
+  margin-bottom: -10px; /* Add space below the filter buttons */
+  border-radius:10rem
+}
+
+.filter-buttons button {
+  background-color: rgba(240, 240, 240, 0.9);
+  border: none;
+  padding: 10px 30px; /* Increased padding for more uniform appearance */
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #000;
+  min-width: 8rem; /* Ensures a minimum width for all buttons */
+  text-align: center; /* Ensures the text is centered within the button */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-buttons button.active {
+  background-color: black;
+  color: white;
+  min-width: 8rem; /* Keeps the minimum width consistent for active state */
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 1);
+  
+  padding: 10px;
+  gap: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.dropdown, .location-input {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.map-button, .search-button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button i {
+  font-size: 1.2em;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>NowSpace Search</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 20:55:42</sys_created_on>
+        <sys_id>8b4c4413870d1a1078147774dabb3569</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>NowSpace Search</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_widget_8b4c4413870d1a1078147774dabb3569</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 20:58:09</sys_updated_on>
+        <template><![CDATA[<div class="real-estate-search-container">
+  <!-- Background Video confined to widget area -->
+  <div class="video-wrapper">
+    <video autoplay muted loop id="backgroundVideo">
+      <source src="banner.mp4" type="video/mp4"> <!-- Replace with your video URL -->
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <!-- Add a semi-transparent background wrapper around all content -->
+  <div class="content-wrapper">
+    <h1>Find your dream Home For Rent</h1>
+
+    <div class="search-bar-wrapper">
+      <!-- Filter buttons attached on top of the search bar -->
+      <div class="filter-buttons">
+        <button ng-click="c.selectOption('buy')" ng-class="{'active': c.selectedOption === 'buy'}">Buy</button>
+        <button ng-click="c.selectOption('rent')" ng-class="{'active': c.selectedOption === 'rent'}">Rent</button>
+        <button ng-click="c.selectOption('sell')" ng-class="{'active': c.selectedOption === 'sell'}">Sell</button>
+        <button ng-click="c.selectOption('realtor')" ng-class="{'active': c.selectedOption === 'realtor'}">Realtor selection</button>
+      </div>
+
+      <!-- Search bar itself -->
+      <div class="search-bar">
+        <select ng-model="c.homeType" ng-options="type for type in c.homeTypes" class="dropdown">
+          <option value="">New home</option>
+        </select>
+        
+        <select ng-model="c.rooms" ng-options="room for room in c.roomOptions" class="dropdown">
+          <option value="">1, 2 rooms</option>
+        </select>
+        
+        <select ng-model="c.priceRange" ng-options="range for range in c.priceRanges" class="dropdown">
+          <option value="">$570,000 - $830,000</option>
+        </select>
+        
+        <input type="text" ng-model="c.location" placeholder="Miami 1142, United States" class="location-input">
+        
+        <div class="action-buttons">
+          <button class="map-button" ng-click="c.showOnMap()">Show on map</button>
+          <button class="search-button" ng-click="c.searchProperties()">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>8b4c4413870d1a1078147774dabb3569</id>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 20:55:41</sys_created_on>
+        <sys_id>d05c04df87c91a1078147774dabb3570</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 20:55:41</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

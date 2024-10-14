@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="INSERT_OR_UPDATE">
+        <app_config display_value="NowSpace Agent Workspace">ea8da79b83c11a1035e174efeeaad36f</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>NowSpace Agent Dashboard</name>
+        <optional_parameters>sysId,tabSysId,filter,edit,element</optional_parameters>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>nowspace-agent-dashboard</route_type>
+        <screen_type display_value="NowSpace Agent Dashboard">bf1e2b9b83c11a1035e174efeeaad341</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>nakul</sys_created_by>
+        <sys_created_on>2024-10-10 13:22:15</sys_created_on>
+        <sys_id>b31ee3db83c11a1035e174efeeaad3ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NowSpace Agent Dashboard</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sys_ux_app_route_b31ee3db83c11a1035e174efeeaad3ee</sys_update_name>
+        <sys_updated_by>nakul</sys_updated_by>
+        <sys_updated_on>2024-10-10 13:22:15</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="delete_multiple" query="documentkey=b31ee3db83c11a1035e174efeeaad3ee"/>
+</record_update>

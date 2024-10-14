@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_source">
+    <sys_search_source action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="sn_customerservice_case">active=true<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </condition>
+        <group/>
+        <name>Now Space - sn_customerservice_case</name>
+        <roles/>
+        <source_table>sn_customerservice_case</source_table>
+        <sys_class_name>sys_search_source</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 17:45:58</sys_created_on>
+        <sys_id>05e06f8f8301d61035e174efeeaad30c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Now Space - sn_customerservice_case</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sys_search_source_05e06f8f8301d61035e174efeeaad30c</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 17:45:58</sys_updated_on>
+    </sys_search_source>
+    <sys_translated_text action="delete_multiple" query="documentkey=05e06f8f8301d61035e174efeeaad30c"/>
+</record_update>

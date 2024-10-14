@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="f2e0af8f8301d61035e174efeeaad360" sys_domain="global" table="sn_customerservice_case" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>72e023cf8301d61035e174efeeaad3ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_customerservice_case" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">f2e0af8f8301d61035e174efeeaad360</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">bee023cf8301d61035e174efeeaad3ea</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:04</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b2e063cf8301d61035e174efeeaad314</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_customerservice_case" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">f2e0af8f8301d61035e174efeeaad360</sys_ui_form>
+            <sys_ui_section caption="Notes" display_value="Notes" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">fee063cf8301d61035e174efeeaad312</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fee063cf8301d61035e174efeeaad31a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_customerservice_case" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">f2e0af8f8301d61035e174efeeaad360</sys_ui_form>
+            <sys_ui_section caption="Related Records" display_value="Related Records" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ee063cf8301d61035e174efeeaad319</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:05</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fae063cf8301d61035e174efeeaad32d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_customerservice_case" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">f2e0af8f8301d61035e174efeeaad360</sys_ui_form>
+            <sys_ui_section caption="Closure Information" display_value="Closure Information" name="sn_customerservice_case" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">7ae063cf8301d61035e174efeeaad32c</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:05</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>sn_customerservice_case</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f2e0af8f8301d61035e174efeeaad360</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_customerservice_case</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+            <sys_update_name>sys_ui_form_sections_f2e0af8f8301d61035e174efeeaad360</sys_update_name>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:04</sys_updated_on>
+            <sys_user/>
+            <view display_value="Workspace Now Space 0" name="workspace-now-space-0">bfd0eb8ff401d61059c6b024e7ece25c</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
