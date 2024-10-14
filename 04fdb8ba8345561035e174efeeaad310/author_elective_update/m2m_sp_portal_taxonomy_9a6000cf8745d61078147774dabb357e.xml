@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_taxonomy">
+    <m2m_sp_portal_taxonomy action="DELETE">
+        <active>true</active>
+        <order>100</order>
+        <sp_portal display_value="NowSpace">07ff37fe8745d61078147774dabb3555</sp_portal>
+        <sys_class_name>m2m_sp_portal_taxonomy</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 01:25:11</sys_created_on>
+        <sys_id>9a6000cf8745d61078147774dabb357e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NowSpace.Employee</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>m2m_sp_portal_taxonomy_9a6000cf8745d61078147774dabb357e</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 01:25:11</sys_updated_on>
+        <taxonomy display_value="Employee">1f5d5a40c3203010069aec4b7d40dd93</taxonomy>
+    </m2m_sp_portal_taxonomy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Space">04fdb8ba8345561035e174efeeaad310</application>
+        <file_path/>
+        <instance_id>cf03ca63ebc0d250e483f459bad0cd70</instance_id>
+        <instance_name>ven07370</instance_name>
+        <name>m2m_sp_portal_taxonomy_9a6000cf8745d61078147774dabb357e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="m2m_sp_portal_taxonomy"><m2m_sp_portal_taxonomy action="INSERT_OR_UPDATE"><active>true</active><order>100</order><sp_portal display_value="NowSpace">07ff37fe8745d61078147774dabb3555</sp_portal><sys_class_name>m2m_sp_portal_taxonomy</sys_class_name><sys_created_by>rajat</sys_created_by><sys_created_on>2024-10-09 01:25:11</sys_created_on><sys_id>9a6000cf8745d61078147774dabb357e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>NowSpace.Employee</sys_name><sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package><sys_policy/><sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope><sys_update_name>m2m_sp_portal_taxonomy_9a6000cf8745d61078147774dabb357e</sys_update_name><sys_updated_by>rajat</sys_updated_by><sys_updated_on>2024-10-09 01:25:11</sys_updated_on><taxonomy display_value="Employee">1f5d5a40c3203010069aec4b7d40dd93</taxonomy></m2m_sp_portal_taxonomy></record_update>]]></payload>
+        <payload_hash>-505611867</payload_hash>
+        <record_name>NowSpace.Employee</record_name>
+        <reverted_from/>
+        <source>48fdb8ba8345561035e174efeeaad314</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 01:25:12</sys_created_on>
+        <sys_id>526000cf8745d61078147774dabb3582</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1926ee14cc60000001</sys_recorded_at>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 01:25:12</sys_updated_on>
+        <type>Portal Taxonomy</type>
+        <update_guid>566000cfef45d61072e441dd6f9c4c81</update_guid>
+        <update_guid_history>566000cfef45d61072e441dd6f9c4c81:-505611867</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="NowSpace.Employee">17221caf83c51a1035e174efeeaad359</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 15:59:47</sys_created_on>
+        <sys_db_object display_value="" name="m2m_sp_portal_taxonomy">m2m_sp_portal_taxonomy</sys_db_object>
+        <sys_id>14e54c8981f5485082d57b14791659c4</sys_id>
+        <sys_metadata>9a6000cf8745d61078147774dabb357e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NowSpace.Employee</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_scope_delete display_value="">3968138c0ac74935be7147581295b391</sys_scope_delete>
+        <sys_update_name>m2m_sp_portal_taxonomy_9a6000cf8745d61078147774dabb357e</sys_update_name>
+        <sys_update_version display_value="m2m_sp_portal_taxonomy_9a6000cf8745d61078147774dabb357e">526000cf8745d61078147774dabb3582</sys_update_version>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 15:59:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

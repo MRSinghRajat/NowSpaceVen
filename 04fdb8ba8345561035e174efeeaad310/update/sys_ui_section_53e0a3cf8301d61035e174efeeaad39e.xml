@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="53e0a3cf8301d61035e174efeeaad39e" sys_domain="global" table="cmn_location" version="3" view="workspace-now-space-0">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>0</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>17e0a3cf8301d61035e174efeeaad39f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>street</element>
+            <position>1</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>17e0a3cf8301d61035e174efeeaad3a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>city</element>
+            <position>2</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>1fe0a3cf8301d61035e174efeeaad39f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>3</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>1fe0a3cf8301d61035e174efeeaad3a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>zip</element>
+            <position>4</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>17e0a3cf8301d61035e174efeeaad3a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>country</element>
+            <position>5</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>17e0a3cf8301d61035e174efeeaad3a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>1fe0a3cf8301d61035e174efeeaad3a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>contact</element>
+            <position>7</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>1fe0a3cf8301d61035e174efeeaad3a1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>phone</element>
+            <position>8</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>1fe0a3cf8301d61035e174efeeaad3a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>fax_phone</element>
+            <position>9</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>17e0a3cf8301d61035e174efeeaad3a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>parent</element>
+            <position>10</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>1fe0a3cf8301d61035e174efeeaad3a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>latitude</element>
+            <position>11</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>17e0a3cf8301d61035e174efeeaad3a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>longitude</element>
+            <position>12</position>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_id>17e0a3cf8301d61035e174efeeaad3a4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="cmn_location" sys_domain="global" view="bfd0eb8ff401d61059c6b024e7ece25c">53e0a3cf8301d61035e174efeeaad39e</sys_ui_section>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>cmn_location</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>rajat</sys_created_by>
+            <sys_created_on>2024-10-09 17:46:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>53e0a3cf8301d61035e174efeeaad39e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>cmn_location</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+            <sys_update_name>sys_ui_section_53e0a3cf8301d61035e174efeeaad39e</sys_update_name>
+            <sys_updated_by>rajat</sys_updated_by>
+            <sys_updated_on>2024-10-09 17:46:07</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Workspace Now Space 0" name="workspace-now-space-0">bfd0eb8ff401d61059c6b024e7ece25c</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

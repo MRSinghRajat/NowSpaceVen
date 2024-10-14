@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="NowSpace">e0e03f4b8381d61035e174efeeaad3c9</application>
+        <filter/>
+        <name>NowSpace Contracts</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_pamtn_now_space.nowspace_contracts_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>nakul</sys_created_by>
+        <sys_created_on>2024-10-09 19:14:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7305bf8f8381d61035e174efeeaad3c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NowSpace Contracts</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sys_ui_module_7305bf8f8381d61035e174efeeaad3c1</sys_update_name>
+        <sys_updated_by>nakul</sys_updated_by>
+        <sys_updated_on>2024-10-09 19:14:05</sys_updated_on>
+        <table>x_pamtn_now_space_nowspace_contracts</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>true</can_share>
+        <can_write>true</can_write>
+        <dashboard display_value="Now Space Requests">79fd787a8345561035e174efeeaad3bf</dashboard>
+        <group/>
+        <owner>true</owner>
+        <role/>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-08 11:15:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f9fdf8ba8345561035e174efeeaad3e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>79fd787a8345561035e174efeeaad3bf</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>par_dashboard_permission_f9fdf8ba8345561035e174efeeaad3e1</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-08 11:15:39</sys_updated_on>
+        <user display_value="Rajat Singh">060d14a6834dd21035e174efeeaad39c</user>
+    </par_dashboard_permission>
+</record_update>

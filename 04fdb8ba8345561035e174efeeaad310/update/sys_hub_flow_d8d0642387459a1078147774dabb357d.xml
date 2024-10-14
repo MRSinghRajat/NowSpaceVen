@@ -1,0 +1,1542 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=6710000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>c353f666db439700a9c7594e5e961970</copied_from>
+        <copied_from_name>Send a Document for Digital Sign</copied_from_name>
+        <description>&lt;p&gt;The flow shows an implementation of Docusign actions for sending a document for digital Signature. The flow is triggered based on a Catalog Item.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Trigger:&lt;/b&gt; The flow is triggered every time a Service Catalog request is created and the catalog request item is 'Send a Document for Digital Signature'.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Flow Steps:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;b&gt;Get Catalog Variables:&lt;/b&gt; The step retrieves the catalog variables from the Request Item using Get Catalog variables action.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Lookup Attachment Record:&lt;/b&gt; The step retrieves the attachment record of the document attached to Catalog Item.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Send Adhoc Signature Request to User:&lt;/b&gt; The step sends the document to the recipient for Signing.&lt;/li&gt;
+&lt;li&gt;The state of the Request Item is changed based on the state of the Envelope record being Completed, Declined or Voided.&lt;/li&gt;
+&lt;li&gt;Error is logged in case of errors when Sending the Document for Signature.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target="_blank" href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>nowspace_digital_signature</internal_name>
+        <label_cache>[{"name":"Created_1.current.consumer.email","label":"Trigger - Record Created➛NowSpace Contracts Record➛Tenant➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"csm_consumer","column_name":"email","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["recipient_email"]}},{"name":"Created_1.current.consumer.name","label":"Trigger - Record Created➛NowSpace Contracts Record➛Tenant➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"csm_consumer","column_name":"name","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["recipient_name"]}},{"name":"Created_1.current.nowspace_property","label":"Trigger - Record Created➛NowSpace Contracts Record➛NowSpace Property","reference":"x_pamtn_now_space_nowspace_property_listing","reference_display":"NowSpace Property Listing","type":"reference","base_type":"reference","parent_table_name":"x_pamtn_now_space_nowspace_contracts","column_name":"nowspace_property","usedInstances":{}},{"name":"Created_1.current","label":"Trigger - Record Created➛NowSpace Contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","usedInstances":{"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452":["conditions"],"6e39fb88-7c29-4422-a04a-67861bd4bd30":["target_record"],"59a80957-eb78-4130-b5c2-a0c70f942428":["record"],"2f1e6a6b-8521-495c-b6e5-6007127e99d5":["record"],"6415ca4d-7609-4c00-a8da-942fce47e6f1":["record"],"e05d18fc-9185-460c-82ef-28afa2141dfc":["record"],"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["account"]},"attributes":{}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.recipient_email","label":"2 - Send Adhoc Signature Request to User➛Recipient Email","reference_display":"Recipient Email","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b3d46bf9-db1f-4401-94e2-2ec83611746f"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.recipient_name","label":"2 - Send Adhoc Signature Request to User➛Recipient Name","reference_display":"Recipient Name","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9ed169f6-5412-46e9-920b-ec7eee69ccc3"}},{"name":"e05d18fc-9185-460c-82ef-28afa2141dfc.table_name","label":"14 - Update Record➛x_pamtn_now_space_nowspace_contracts Table","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e05d18fc-9185-460c-82ef-28afa2141dfc.record","label":"14 - Update Record➛x_pamtn_now_space_nowspace_contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6415ca4d-7609-4c00-a8da-942fce47e6f1.table_name","label":"12 - Update Record➛x_pamtn_now_space_nowspace_contracts Table","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6415ca4d-7609-4c00-a8da-942fce47e6f1.record","label":"12 - Update Record➛x_pamtn_now_space_nowspace_contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2f1e6a6b-8521-495c-b6e5-6007127e99d5.table_name","label":"10 - Update Record➛x_pamtn_now_space_nowspace_contracts Table","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2f1e6a6b-8521-495c-b6e5-6007127e99d5.record","label":"10 - Update Record➛x_pamtn_now_space_nowspace_contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"59a80957-eb78-4130-b5c2-a0c70f942428.table_name","label":"8 - Update Record➛x_pamtn_now_space_nowspace_contracts Table","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"59a80957-eb78-4130-b5c2-a0c70f942428.record","label":"8 - Update Record➛x_pamtn_now_space_nowspace_contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d0580dd0-4764-47b3-a593-aa1c5cfe5806.Task","label":"1.4.4.1➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"5c7a8eb8-f792-4dd1-a78c-f99020ec6c6a.Catalog Task","label":"4.2.1➛Catalog Task","reference":"sc_task","reference_display":"Catalog Task","type":"document_id","base_type":"document_id"},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"60d37506-5322-4cbd-aa24-0bb577a61d75.select_recipient","label":"2➛select_recipient","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"f04ffb03-b473-4bd9-bd1a-8899be6a1e9c.Record","label":"2➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"f04ffb03-b473-4bd9-bd1a-8899be6a1e9c.Table","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.status12","label":"2➛Status","reference_display":"Status","type":"string","base_type":"string"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.error_message12","label":"2➛Error Message","reference_display":"Error Message","type":"string","base_type":"string"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.envelope_id12","label":"2➛Envelope","reference":"sn_docusign_spoke_envelopes","reference_display":"Envelopes","type":"document_id","base_type":"document_id"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.envelope_uri12","label":"2➛Envelope URI","reference_display":"Envelope URI","type":"string","base_type":"string"},{"name":"e8b0c4a7-b34a-496a-9b57-82a67c4cf55b.Record","label":"2➛Attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference"},{"name":"e8b0c4a7-b34a-496a-9b57-82a67c4cf55b.Table","label":"2➛Attachment Table","reference":"sys_attachment","reference_display":"Attachment","type":"table_name","base_type":"table_name"},{"name":"Service Catalog_1.request_item.sys_id","label":"Trigger➛Requested Item Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sc_req_item","column_name":"sys_id"},{"name":"e8b0c4a7-b34a-496a-9b57-82a67c4cf55b.Record.file_name","label":"2➛Attachment Record➛File name","reference":"","reference_display":"File name","type":"string","base_type":"string","parent_table_name":"sys_attachment","column_name":"file_name"},{"name":"60d37506-5322-4cbd-aa24-0bb577a61d75.select_recipient.first_name","label":"1➛select_recipient➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"60d37506-5322-4cbd-aa24-0bb577a61d75.select_recipient.email","label":"1➛select_recipient➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.envelope_id12.status","label":"2➛Envelope➛Status","reference":"","reference_display":"Status","type":"string","base_type":"string","parent_table_name":"sn_docusign_spoke_envelopes","column_name":"status"},{"name":"e8fd0884-20e8-4ecd-bdfc-6d7955a141d4.Catalog Task","label":"4.2.1➛Catalog Task","reference":"sc_task","reference_display":"Catalog Task","type":"document_id","base_type":"document_id"},{"name":"076a07dc-43e0-44fd-bc10-b5b0249e72c0.email","label":"4.3.1➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference"},{"name":"93bedb0b-5305-476d-ab0c-f2e25a871224.record","label":"2.3.1➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"93bedb0b-5305-476d-ab0c-f2e25a871224.table_name","label":"2.3.1➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item","type":"table_name","base_type":"table_name"},{"name":"50a6069e-cea7-4b63-9552-3330cbfb36eb.email","label":"2.4.1➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference"},{"name":"Service Catalog_1.request_item.opened_by.email","label":"Trigger➛Requested Item Record➛Opened by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"Service Catalog_1.request_item.number","label":"Trigger➛Requested Item Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"number"},{"name":"Service Catalog_1.request_item.cat_item","label":"Trigger➛Requested Item Record➛Item","reference":"sc_cat_item","reference_display":"Catalog Item","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"cat_item"},{"name":"Service Catalog_1.request_item.cat_item.name","label":"Trigger➛Requested Item Record➛Item➛Name","reference":"","reference_display":"Name","type":"translated_text","base_type":"translated_text","parent_table_name":"sc_cat_item","column_name":"name"},{"name":"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452.Record","label":"1 - Look Up Record➛sys_attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["document"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452.Table","label":"1 - Look Up Record➛sys_attachment Table","reference":"sys_attachment","reference_display":"Attachment","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.status12","label":"2 - Send Adhoc Signature Request to User➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"Error","order":0.0},{"label":"Success","value":"Success","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3afd5958-d372-4875-bf0b-a5f5fda4e3c3"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.error_message12","label":"2 - Send Adhoc Signature Request to User➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8837f9a7-3ab9-4437-83da-9f5aa5b67924"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.envelope_id12","label":"2 - Send Adhoc Signature Request to User➛Envelope","reference":"sn_docusign_spoke_envelopes","reference_display":"Envelopes","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ca6e9eeb-47e9-4719-9ca6-7f27b719b620"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.envelope_uri12","label":"2 - Send Adhoc Signature Request to User➛Envelope URI","reference_display":"Envelope URI","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b7a5aadf-1548-4043-87b8-0765f299e270"}},{"name":"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452.Record.sys_id","label":"1 - Look Up Record➛sys_attachment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_attachment","column_name":"sys_id","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["document"]}},{"name":"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452.Record.file_name","label":"1 - Look Up Record➛sys_attachment Record➛File name","reference":"","reference_display":"File name","type":"string","base_type":"string","parent_table_name":"sys_attachment","column_name":"file_name","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["document_name"],"9e5b756f-eb31-45ed-88e5-fbbaff83e65e":["target_record"],"6e39fb88-7c29-4422-a04a-67861bd4bd30":["document_name"]}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.envelope_id12.status","label":"2 - Send Adhoc Signature Request to User➛Envelope➛Status","reference":"","reference_display":"Status","type":"string","base_type":"string","parent_table_name":"sn_docusign_spoke_envelopes","column_name":"status"},{"name":"59a80957-eb78-4130-b5c2-a0c70f942428.Task","label":"8➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"3ab9d28d-56b9-4e5d-beae-84cd2b8d9bef.Task","label":"1.4.3.1➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"7f7e1946-878b-4017-90e9-38a649c65c9c.record","label":"1.4.3.2➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"7f7e1946-878b-4017-90e9-38a649c65c9c.table_name","label":"1.4.3.2➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item","type":"table_name","base_type":"table_name"},{"name":"2f1e6a6b-8521-495c-b6e5-6007127e99d5.Task","label":"10➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"e05d18fc-9185-460c-82ef-28afa2141dfc.Task","label":"14➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"be76c8ca-ad77-4e18-8ba2-b3b4128d09eb.record","label":"1.4.4.2➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"be76c8ca-ad77-4e18-8ba2-b3b4128d09eb.table_name","label":"1.4.4.2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"6415ca4d-7609-4c00-a8da-942fce47e6f1.Task","label":"12➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"9e5b756f-eb31-45ed-88e5-fbbaff83e65e.status","label":"6 - Look up Document ID by Name➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"Error","order":0.0},{"label":"Success","value":"Success","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9e5b756f-eb31-45ed-88e5-fbbaff83e65e.error_message","label":"6 - Look up Document ID by Name➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9e5b756f-eb31-45ed-88e5-fbbaff83e65e.document_id","label":"6 - Look up Document ID by Name➛Document ID","reference_display":"Document ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6e39fb88-7c29-4422-a04a-67861bd4bd30.status","label":"7 - Attach DocuSign Document to Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"Error","order":0.0},{"label":"Success","value":"Success","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6e39fb88-7c29-4422-a04a-67861bd4bd30.error_message","label":"7 - Attach DocuSign Document to Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6e39fb88-7c29-4422-a04a-67861bd4bd30.attachment","label":"7 - Attach DocuSign Document to Record➛Attachment","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.contract_administrator","label":"Trigger - Record Created➛NowSpace Contracts Record➛Contract administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_pamtn_now_space_nowspace_contracts","column_name":"contract_administrator","usedInstances":{"3da25d19-437b-4f7f-90d8-a2023e8ed4cd":["assignment_group","assigned_to"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛NowSpace Contracts Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_pamtn_now_space_nowspace_contracts","column_name":"number","usedInstances":{"3da25d19-437b-4f7f-90d8-a2023e8ed4cd":["short_description"]}}]</label_cache>
+        <master_snapshot>7724f0ef87859a1078147774dabb3595</master_snapshot>
+        <master_snapshot_digest/>
+        <name>NowSpace Digital Signature</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>ab7ae06b83891a1035e174efeeaad352</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d8d0642387459a1078147774dabb357d</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>NowSpace Digital Signature</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sys_hub_flow_d8d0642387459a1078147774dabb357d</sys_update_name>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:41</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=d8d0642387459a1078147774dabb357d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d8d0642387459a1078147774dabb357d"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_pamtn_now_space_nowspace_contracts">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>Liam</sys_created_by>
+        <sys_created_on>2024-10-10 17:46:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ab7ae06b83891a1035e174efeeaad352</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:41</sys_updated_on>
+        <table>x_pamtn_now_space_nowspace_contracts</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>d8d0642387459a1078147774dabb357d</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:55:41</sys_created_on>
+        <sys_id>047abc6b87c59a1078147774dabb3562</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:41</sys_updated_on>
+        <trigger display_value="">ab7ae06b83891a1035e174efeeaad352</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=d8d0642387459a1078147774dabb357d^sys_idNOT IN047abc6b87c59a1078147774dabb3562"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=d8d0642387459a1078147774dabb357d^sys_idNOT IN60d0642387459a1078147774dabb35c5,e4d0642387459a1078147774dabb35c5"/>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <label>Gather data from Catalog Item</label>
+        <order>0</order>
+        <stage_id>8dd6f87f-e20d-488d-b998-bbae55c445d8</stage_id>
+        <states>{"pending":"Pending - has not started","inprogress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:45</sys_created_on>
+        <sys_id>60d0642387459a1078147774dabb35c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 17:03:45</sys_updated_on>
+        <type>standard</type>
+        <value>Gather data from Catalog Item</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <label>Send Signature Request</label>
+        <order>1</order>
+        <stage_id>7bc70860-e9d7-439f-a58e-a1421eae98c3</stage_id>
+        <states>{"pending":"Pending - has not started","inprogress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:45</sys_created_on>
+        <sys_id>e4d0642387459a1078147774dabb35c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 17:03:45</sys_updated_on>
+        <type>standard</type>
+        <value>Send Signature Request</value>
+    </sys_hub_flow_stage>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d8d0642387459a1078147774dabb357d^sys_idNOT IN58d0642387459a1078147774dabb357e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d8d0642387459a1078147774dabb357d</id>
+        <name>NowSpace Digital Signature</name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>58d0642387459a1078147774dabb357e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 17:03:44</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=58d0642387459a1078147774dabb357e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=d8d0642387459a1078147774dabb357d^sys_idNOT IN11522ca387459a1078147774dabb3515,14d0642387459a1078147774dabb3589"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</model>
+        <model_id>d8d0642387459a1078147774dabb357d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d8d0642387459a1078147774dabb357d</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:10:21</sys_created_on>
+        <sys_id>11522ca387459a1078147774dabb3515</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 17:10:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=11522ca387459a1078147774dabb3515"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</model>
+        <model_id>d8d0642387459a1078147774dabb357d</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d8d0642387459a1078147774dabb357d</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>14d0642387459a1078147774dabb3589</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 17:10:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=14d0642387459a1078147774dabb3589"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=d8d0642387459a1078147774dabb357d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d8d0642387459a1078147774dabb357d"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=d8d0642387459a1078147774dabb357d^sys_idNOT INd5522ca387459a1078147774dabb3528"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:10:22</sys_created_on>
+        <sys_id>d5522ca387459a1078147774dabb3528</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 17:23:27</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxnLdtkkUDbBPUTtuHIBUoamgTpSlXopR4F/n3DnWxZV18iZ1N9mURkxTnzOGZM+Q+fDMF8UGYF+Y98QWYPZNLBZEk4n65ABxWetiTZK7n5kQGRIXR0rxQUQI9M4wCiMwLu2emRCQwWcY3AX6ES7Mvis/NYhp/P3sLMlfSk+GTFy8IBf1X/gcNpYoIVTEuD3i8EGT5V/HVbfg00WuMy8oaOuMiiECaFw+PPXNBIoyoNJpvtSmuIVFGycgBi7q26ziW5Zz3bf/M9W0ncAlYFm5YZ6KWgmohZJ0/PCuQAWAoRkQMLVxFQII7KZarFTOkOidrTp5j/hV3P7f0OgaInUI+R2chp3C3UDyU+UgOKJ8MRTKXtzlQzRswkghV8oYjSQxeAAuNTUcrQrPJLHwal4E+c5mlUUyKkBKx+kWUirifKIg1s4wL5NjLSYjDJMpgjq8v78ZX3t+f7i9/ux574+vJ/fjm8v76ynzJ8vH+S/SOOcICi5en87I67M8chD4pmcx9RNMzYxrxhfpEFU+hgPPSWwsWtRDwjJWGaGk5FW+KtkipPDXL6tQtrWxeavef6z+a0swHD9Pi2RkhAZAOLfqsosVqki3QVEu+1ey2qbIY2UeWfct6a2HmNfJqXc7DAMTVejsTJ6dTVCqXiySziyciVeyp0CNB4FUI00sR0y6h5rm97FRllEj8wFsR39RmRtuKvy88RrgPWFklN9mWOM++FFuOE2mEeEL4j0GTCKlRRmlK7GZOpgWjbAICqKqcNvszrv76nccxl9MK6lXQjINGzFU4VI1RppTHjo8M/vjKwmzym9Z4qxXowdVp24z5wBxrqGvTtlyf2dbQGhAWuJZFnUp1NsF0olS103+TKu2o0TgTmNhDTnUuC5RWVeF7SSPd1FWZrT72wgouTwPNPhE0R0OrWZp7kKet9JcPX23KcFtqJ+7RJEgJfhHsa217uhoTeGfjbd12l6P5hP47jcJEBnWL0XsaXBrrFcZPBX8/n9DdWBjBdgCbK97J19YMlxolcnkCR3OZ7Y+gDxYamYse5g9GI58Sh7Hh2RAcu+Zoaxit2D6Wk+1QUNomwS5XaxVD2qahA/zsCIANbzsY4PGuViiw1dPyuR/DvZ5mID2EGnlC+1PDxKaCB1DOvbqCG1HSdc0eW8XsfEQH9nBIh/hiwCpmffCJ3XcGZDQ8c88HtSpuQNkGU7WQ8F3eEfEyzoB8uIfuW8owBqV0yzi8k0q8VGbfkDxIpZtp7o3MJMLIuA3lLzfrdcYEsEllL8ZTtdR9UOBmkfG2MPxQzRo9HUP/iuMbofVdsIOV93zK1PSQbqZ19FMG+ueDEXPbLYON2ixjDaYb5se5Auyp+rSzftruAvuKOG2thc7m/QpZ1vRQ7epbrh2nIsU+OSnO25HiHn3VKYuu8/32GrA/UFvKLgTH9CYdE7yQVQ35KjRwwsAgBmdG8b9y+Bz3l4aaAVIq8E6LAQ0d/VgnrnaGJpSVgr8vkPyW3OhQOGwUN593bT61Uz/tyxOCIRkM3I4766j+8mwDtAPvx2lFBys9bSucrf3osH3re7Z2pIoMN49+z15z0qzbG85xWbe2nF1ZH99Mtr2bW1B80Dbx+D98yBcCIR4AAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=d8d0642387459a1078147774dabb357d^sys_idNOT IN14d0642387459a1078147774dabb359a,18d0642387459a1078147774dabb3599,1cd0642387459a1078147774dabb3596,1cd0642387459a1078147774dabb359a,1cd0642387459a1078147774dabb359b,1cd0642387459a1078147774dabb359c,1cd0642387459a1078147774dabb359d,1cd0642387459a1078147774dabb359e,4b3dace387859a1078147774dabb35e4,54d0642387459a1078147774dabb3598,5cd0642387459a1078147774dabb3598"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Attach DocuSign Document to Record">7aad3e7fdb8f1b00a9c7594e5e96198e</action_type>
+        <action_type_parent display_value="Attach DocuSign Document to Record">72452c77db7ed300dd14596e5e9619a5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>7aad3e7fdb8f1b00a9c7594e5e96198e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>32d087b3-a860-44d5-a93a-541f24f4cab3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>14d0642387459a1078147774dabb359a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:32</sys_updated_on>
+        <ui_id>6e39fb88-7c29-4422-a04a-67861bd4bd30</ui_id>
+        <values>H4sIAAAAAAAA/+2WW0/bMBTHvwrycxMlTdKmfZsoSJU2kCjiBaHo2D4u1lwnc5xCV/Hd5zTpjUsHG3sY4jHH5/r3+cm5XhJgVuZ6rEsLmuFkUY45GZKUx/2YdwNOQzqgQQAD1k8GMSY46IWDMCQdImu/PgKPsC84TUX4xG/AnZ+GGTpPC2aKNjPIclOb56Cq2r5cHhsEizwLfVYZg9o+PLhzLstCweKqdXMWdisVd+dkeH3TIQUYl9iiIcPlo6PXdqaAonKul6vWji7Wrb3QsV0UtdmgQFeKYWv62ma52LG7gLqxsEPw3qLm6DoSoErskBloDjY3CzK0pnIGNz0/12qx8biV2jYTz+C+lD9d0ajb2ak7JFIzyZ1SZMd8CVThqFHNuYy3LmIEFiauGrOV2YiZS4ZlIxhHAZWyx7u2xuG8qLejCbF1gTY6V9VMnzU6kU2CncuqSsw4FvXs9TTtaGJym99thDqVeiVTe6hyBmrHFcGw21OJqr5OXc2o8+0QsNZIWtm6zyWp5OXTW2mMz90LKpy5frIZFIXU06ww+VyuenAjzfypch++UPmd672UU+03dPjuxsA/dfbRynwFRtZifHNpXPBDh5SL8lhBWW4lcQ1lP6p6oEagVoqsUbMOYUYW9osrMMd26ofO3/IYiENbD/F2u1HPUeUF7qEIAYu7PUg8Jnp9L2Yx9WgS9ryQdsMwokL0E+avIzPJw+67sPqKrtesnmzbfjrI2wnt/itCS53xnFX1tmRlkX/HbN1neQDakx2fj0Ct5J/E/obYNDq4+3S76PU+rbSQ++/nABPaT3rCQxqFXpwg99IUE09QCkKkEfYS9HeCn0P2D7O8DfNXjLrGfNQWOhqPXhKghb10y6Wnj0ifrI0t5tF7YZ4GQbAP+gGa/1eIXwB2o/Q+rRutPzyqrH9of2n4zKauvrewTtx87k/XPbTYS3lEqRdBwtxDG4CXshg8CLmIBnFXxEnXb35IfSEVrhI9B+47ZHwbxK8Q4QnEZ40KL4jzFpDjT5A/Qb75BTIyhzq3DgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look up Document ID by Name">a7f007ffdb475b00dd14596e5e9619f2</action_type>
+        <action_type_parent display_value="Look up Document ID by Name">04ef3b1fdbb2d300dd14596e5e961981</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>a7f007ffdb475b00dd14596e5e9619f2</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>32d087b3-a860-44d5-a93a-541f24f4cab3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>18d0642387459a1078147774dabb3599</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:32</sys_updated_on>
+        <ui_id>9e5b756f-eb31-45ed-88e5-fbbaff83e65e</ui_id>
+        <values>H4sIAAAAAAAA/9VTXU/bMBT9K5Of0yhJk4b2baJDQtqGRBEvCEU39nVrzXUy2yl0Vf/77CQtgdGJiT1sjz4+9+vce+52BKgVlbpUxoKiuNiaS0ZmpEzTPGJJxMq4nJZRBFOaZ9MUM5xO4ikyEhDR8sY8inLOWZnmmeMxFqfZdNLzeOZ4CtbomKg2KKsaC+GDNyAbj+52ENE0mUA2onySj1KalqMyiyejuEzieFxynmc0HATHyX7vEjBhagnb2z6PQ+hKSKZRkdndfUBq0K6uRU1muxdfb21cQonSUT/1xU/NYre1BzVydDUo9tDnPvx6gFea+Y7igOCjRcWckDMO0mBA1qAY2EpvyczqxgEagV0puT0yVkLZbtQ1PBrxwxUdJ8Gg7owYVbCKNkYsVWHq6hsWh1YNGTBvoJQ47xQcDOg5fA4WFq4Daht9VLYS1P226jHk0Eh7PsQ6wlXtL6kLsb5CH13JZq2+dsqRY4LB5hqDBcPa6+En7Mfli1X1cBTvQqhWuv5TVhTkgIqg6epCoPS7bbcC1mpRNtb3uCONuPl1Sx342p5Q4tr1UqyhroVaFrWuNqKt78ZZh0vpHiGX1YPr24sddi4K3QYhvHD4vIVvQQsvxBeXxgXvA2K25lyCMU9yuIaK740fphOnl6HolPQhVIvafnQFNthPvA/e61ue8yg9ef7R2dOtW9BLtIVG6o73uXNxcsbGZTkaQ0adcyMYndEURhAzPp6mCU+zJLxu40IuJBY+42vmfU+qP3P9G8Y+uH7ufORv4EO7qpNy9OY37tjU8oXzFwewt33yt2wfR1H03Pi/cff/auoTBj4q/dy9R63/deve/wQ7lrVndAcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>Retrieve the attachment record of the document attached to the Catalog Item</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>1cd0642387459a1078147774dabb3596</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:32</sys_updated_on>
+        <ui_id>ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452</ui_id>
+        <values>H4sIAAAAAAAA/+VYXW/jKBT9K5af06ydb/dt1ShSpdmpNO3Oy+wIYcANWoI9gNtJo/z3vRg7sRLnw2oqpdpHLhc4995zLtg/Vj4mhqfyXmqDJWGPS31P/Vt/GOGoF9KExiSh4yCgNBwMoxEbsmgURpT6HZ9bPxoFURJFwwn49PtBMBr1CQ7juD8icRDjAfhJvGDgaXAsGAxfsMjtWC81wsZgMl8waWCCcp0JvPx+aJ7MuaCKSf/2x8+On2EF+xqm/NvVztS5wASOmQDXpxLZDlCzzDZDVMw525f6Mu+rm0gVtVCCjs9+GyYpAwwJFpp1/AWWFJtULTcWxTB9kGJrmHOI8Nb3rfNvzd/g3Elg/RIGURHm5jbD4uSpS5ebSqbY4EejcmJyVbqTecoJ0y4nlCU4F+aubnMOD5mtv1viQnerU5Ev5FeXEn+zQVUdsOSaIcoyG6xFX4aSPM7T128V0hmXRV7KSZESLDYjqK7icW4snpXPBLOFRgucZVw+o0ylL7xYDFgW3WcBg24i0lc4VPNn2XXE7UJucXcG9mlh/o4Vt1H8BdvAYgDEBbAEuTLqNFdFOl8QEbkuJhSW2u3lrzuWdncCa72NHNKOfuUWt8tDGTFySbNLiOKZ+RO2eGFlcOvOu4U1PMrfaMtXkkrK7VG6pq4yXNAQp//ksAVdre6Ad4ZRFHZJrqA8Zr3el935C1vq8XQ8lR7v6gE1BVkqc8/2pWmDUpnhxZQ5CILPpk04/Pqk2V5sLgXNiquMBf229YdRkzzX7xdoSI8Smm65q1NlkKtZTaH70mutqTMgVJp6sCrw4uUhVKWkEs4EbbrsZnZi57Lr/X8vu6sUFACiyFWQS8Fl0c4B6IWV9n7pDI/yNg53SFpws/ZwtDasyb6AsGdS7621jM6AU8noEc72nhyeBojVxVRwbfdSqoylevoXU0+/dzn1rDahbpLZkPfqtWupUPm/WX+86w/8rS0I103qbHVm2PbM3npf/f1W8q8Tzs1MD/Duwk/iA3LufGT/mMPS8jzkxI9eOX1mZnt65UVT84rFv03zpTBRVagivGt6XodHPw/j2vOaJ2gBJecZPIsVI8Aq+C5VDCVpLikqPxy2DLQUSLjSpnTe71LfGAhPeimo2jNz5hXe3sa75RPgdBxVDe4TrwqkPE17EIhXBOJtAmkXdpuON7jgE/wjOt4Mc1FUBL4Ls1pJmVKpOtD1ThTzCCvObIlnggovCur9PbNJBo298wTWT/GT4Yr6GmE4HvTwaNwPwyAIA/CdjMfhZBQnIzweJFuBI6QlgR4OkBLgGOBCFacqggT7zcs18rZd6gxUFXenqbS/HXpj41lYQAyvgnUaeNmN4jQVDMuddvQEt9MfsxJ/SfThVbakT/G/LudPu9l2psZ8f9SLJed/S/4rZ4VIJizoTUJKbibjcHwzSOjoJqJ4eIOjeDjuU0YGySUfIT//Az74ytg+FwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update work note with message of Document being signed.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>32d087b3-a860-44d5-a93a-541f24f4cab3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>1cd0642387459a1078147774dabb359a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:33</sys_updated_on>
+        <ui_id>59a80957-eb78-4130-b5c2-a0c70f942428</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8jPVeX0a7RvE1UlJAYSTLwwFN3YN9SS42S2A3RV//uuY7dUMFDR2ANan+L75XNO7mlu1gyEV7U5Nc6DEXi1cqeSzRiOYTrJZCkLUcovnEuZjcbTCY6RwlPOWY+pUDdCybNpNhHDbDgccD44HmXFZFhkAzkExIzqDFRIlRZFbSWd70G3IbBen1gEjzLP+qK1Fo3fbCgvlWs0rK5TGUXEUmlJeTa7ue2xBixN9GjZbP0sdSgkDQVqKr3cYnqO0a+acJa1aCvClatt8Cx1zlPm6HROGWoKcDLeY/jo0UgkICVohz1WgZHga7tiM29bChBpeWH0alexVMZHohU8OvWLbh7xUFciMRNJhN3xOxQa51GkmCrn4OGKpgvf2p1mtRLooi4SS2i1P9mPxYKLJrz92OLD4NRd67Yy51EVthuw905ah7nEJnAN6CO18mpZP1xugS6U6WRJNHUtQO9O4L1VResDnDVDjZ3OFTSNMnd5Y+t71TUTlKp/p+nQL3X9QHc6dWf6cWv7pCz0FxSfd+FrsCqQ+EZjqHnTY27lTjQ490SFdMx/tgFJJJYo5J0KnQR5tw2hWVjV+K901T0m4Jve3zqmGL+1nmL6tI17YJ5c85g3UHmTG9LCNSAwPMUHURtvCZx7aaIDu95ntAOYbI3W7ewrzJLXXsTO9nuPzmMiOW38YU47/mxOS1Q+vdX+mcH44M3//7017Dzl9szl2oLu9Pij5XwoiRlpg/KlnV6te5+BDkC6NdBCoZbuD9C37sGKAHrMI5VnDkrJo+uU3H2vPsxG2YR3v09mpv/ms3X7G+DF88jqCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update work note with message of Document being declined.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>b4ff2e33-6b80-4493-9330-437c6aa0b0a1</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>1cd0642387459a1078147774dabb359b</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:33</sys_updated_on>
+        <ui_id>2f1e6a6b-8521-495c-b6e5-6007127e99d5</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8jPVZX0i7ZvExUSEgMJJl4Yim7sm9aT42S2A3RV//uuY/dDZaCisQe0PsX3y+ec3NPcrxhwJyt9oa0DzfF2aS8Em7LBAMenUJyKfFykeZLAhJ8OJwMc4mSUTlCwDpNtHYoknaQj3k/7/V6S9MaDNB/187Qn+oCYUp2GEqnSIK+M73sE1fjAanVmEByKLO3yxhjUbr2mvJC2VrC8i2UU4QupBOXZ9P6hw2owNNGhYdPVQepYSApyVFR6s8F0iNEta38WFW9KwpXJTfAyds5i5uRiRhlq8nDSpMPw2aEWJNC0AGWxw0rQAlxllmzqTEMBIi2utVpuKxZSu0C0hGcrf9HNg8TXFUjMeBRhe/wGucJZECmkihk4uKXp3DVmq1klOdqgi8ACGuXO9mOh4Lr2bz+0OD84dleqKfVVUIVtB+y9k8ZiJrD2XD36QK24XVRPNxug51K3skSaquKgtidwzsi8cR7OiqHCVucS6lrqeVab6lG2zQSl7M4VHbqFqp7oTivnuhu2tkvKQvec4rM2fAdGehJfaQw1rzvMLu2ZAmt3VEjH7GfjkQRikULWqtBKkLXb4Ju5kbX7Qlc9YgS+7vytY/LhW+vJJ7tt3AOzc81zVkPpdKZJC1sDR/8UHnilnSFw9qWJjux6n9GOYLIxWruzrzCLXnsRu9zvPbkKiei04Yc5bfzZnBapfHqr/TODJb03///31rD1lN0zl21yutPh9yZJ+rTtP5C7dvCBnV6te5+BjkC6MdC5RCXsH6Bv3IMlAXSYBSoHDorJk7uY3H6vPsxG6Shpf5/MTP/NZ+vhN2JDZ/HqCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update work note with message of Document being voided.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id>7babbfc7-d6cd-4dcb-9663-2dc416736c50</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>1cd0642387459a1078147774dabb359c</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:33</sys_updated_on>
+        <ui_id>6415ca4d-7609-4c00-a8da-942fce47e6f1</ui_id>
+        <values>H4sIAAAAAAAA/+VVTU/jMBD9K8jnqkqatpDeEBUSEgsSrLiwKJrYE7DkOFnbAbpV//uOY/dDsKCiZQ9oe4rny++9zGtulwy4k40+09aB5ni9sGeCzVg5StLx4WEmSl6lZZJAzg8n+RgnmE/TPC/ZgElfN0aRpHk65VmaZaMkGR2N03KalelIZICYUp2GGqnSIG+MoPMjqM4HlssTg+BQFOmQd8agdqsV5YW0rYLFTSyjCH+QSlCezW7vBqwFQxMdGjZbvkjtC0lBiYpKr9aYXmJ0i9afRcO7mnAVch08j53zmDk4m1OGmjycNBkwfHaoBRKQCpTFAatBC3CNWbCZMx0FiLS41GqxqXiQ2gWiNTxb+YtuHie+rkJixqMIm+N3KBXOg0ghVc3BwTVN564zG80aydEGXQRW0Cl3shsLBZetf/uhxfnBsbtRXa0vgipsM2DnnXQWC4Gt5+rRB2rV9UPzdLUGeip1L0ukqRoOanMC54wsO+fhLBkq7HWuoW2lvi9a0zzKvpmg1MN7RYdhpZonutPKez0MWzskZWF4SvF5H74BIz2JbzSGmlcDZhf2RIG1WyqkY/Gz80gCsUih6FXoJSj6bfDN3MjWHdNVjxiBrwZ/65hy8t568ny7jTtgtq55LlqonS40aWFb4OifwgNvtDMEzr420Z5dHzPaHkzWRut39g1m0WuvYue7vQcXIRGdNvk0px19NadFKl/eav/MYMno3f//nTXsPWV3zEUXOvzRJUkmuL9aKRSvzfRG1cfMswfKtXlOJSph/wB77RysCZ7DItB44Z6YPLiJyc236tMslE6T/vfFjPTffLLufgNZuK4a5gkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update request item with error details</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>14</order>
+        <parent_ui_id>254190ab-9d27-40af-a972-a07a72d7750e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>1cd0642387459a1078147774dabb359d</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:33</sys_updated_on>
+        <ui_id>e05d18fc-9185-460c-82ef-28afa2141dfc</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8jPVZX0i7ZvExUSEgMJJl4Yim7sG7DkOJk/Cl3V/77r2C0VbKho7AEtL4nvh33OyT3J7ZoBd7LRZ9o60ByvV/ZMsDnLRzgtoToW5bTKyyyDGT8ez0Y4xtkkpzvrMRnqRiiyfJZP+DAfDgdZNpiO8nIyLPOBGAJiTnUaaqRKg7wxgtZLUD4E1usTg+BQFHmfe2NQu82G8kLaVsHqJpVRhD9IJSjP5rd3PdaCoR0dGjZfv0gdCklBiYpKr7aYXmJ0qzasRcN9TbgKuQ2ep85FyhydLShDTQFOnvUYPjnUAglIBcpij9WgBbjGrNjcGU8BIi0utVrtKh6kdpFoDU9W/qSTR1moq5CY8STCbvkNSoWLKFJMVQtwcE27c+fNTrNGcrRRF4EVeOVO9mOx4LINbz+2uLBx6m6Ur/VFVIXtNth7J95iIbANXAP6SK26fmger7ZAT6XuZEk0VcNB7VbgnJGldwHOmqHCTuca2lbq+6I1zVJ2zQSl7t8rWvQr1TzSmVbe636c2j4pC/1Tii+68A0YGUh8pW2oedNjdmVPFFj7TIV0LH74gCQSSxSKToVOgqKbhtDMjWzdFzpqiQn4pve3jinHb40nnz1P4x6YZ9c8FS3UTheatLAtcAxP8YE32hkCZ1+b6MCu9xntACZbo3Uz+wdmyWuvYuf7vUcXMZGcNv4wp00/m9MSlU9vtX9msGzw5vd/bww7T9k9c1lf0pkOv/ssGwofNC0MLiU+vrbUm7XvM9IBiLdGOpWohP0Nha2LsCaQDotI6YWTUvLoJiV3/60Ps1M+ybrrk5nqv/l93f0Cp4AIcfIJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment>Logging error message to ServiceNow Logs for reference</comment>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>254190ab-9d27-40af-a972-a07a72d7750e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>1cd0642387459a1078147774dabb359e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:33</sys_updated_on>
+        <ui_id>9ba6c502-208a-431d-a63b-49c3256901b4</ui_id>
+        <values>H4sIAAAAAAAA/+VUXWvbMBT9K8bPcbCdOGnyNpoVCv2AZnQPpQRZuk4EiuRKctIs5L/st+yX7cpWEveD0bDCHgZ+0fGRdM69V+dhGxJquZKX0lgiKUw35pKF4/CMkNEgYQXLacGGccxY0s9GA8gA4VF/EHZC7nhZTpOc0kHWS+K4h19eJGyUxCOg2dmQDZEnyRKQKdR8JmAFAqEVEZXDQGulcc24KQXZ3Hv4q4fpggumQYbjh8dOWBKNJ1nQ4Xj76tdHpQiS4/3j8MrreEea3ZQOogvFKfj1ld92vgeVZk5G3Anh2YJkgPcXRBjohEsiGbFKbw6IBsJupTgCCy4tnhY68rPhP/C+fux4BaAjCs2/w/IbyQVMmgo1v4oJsWRqdUVtpT29EWywHtuDzSgKbpSEIIpaNW/J33WO3EtZqBaLN0vPTNrM70RLLuct8hqRIzltk/etfN1xz+3tsHsMClIJe366g+TDDtJTHPROcNB3Dpri35buJSElcXPjuuZbo0S1lDfNrIUHv/cvhXp08vIpeFOVgRmD0o2amx0/SMV0odZ3+zm54LJW5H8KRYk4rIi1mueVdfXdhiBgiQfNlqQssRCzUqsVrzej2GV3LnDRLYRa46WGz2W3CYkuTjbpXiA+qeF7ormzeY3H4OZdJzQbcy6IMUezOMazp8opaax7D7O6UPUWqnlpv+AFK/ByXfn/LpbS3p+yALKXb38JxpA5tJoc3MFTBcYGVgVTVBxMFK1cyYJC6WCK3ol7ekFBuAAWrLldBPVgBP6sXz+3WxLTfjogWUSLwTDq034e5VkyiJI8TRJUVAwz2q137RUk6W73Ng7/rZjTQvgDhd8/rOtD1d9thQ9ig3NbP9V2EE/34D4HPi2I0yz7vCR+L9vepsVJYfH/ZcHjb5IbsEakCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>16</order>
+        <parent_ui_id>254190ab-9d27-40af-a972-a07a72d7750e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:57:59</sys_created_on>
+        <sys_id>4b3dace387859a1078147774dabb35e4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:33</sys_updated_on>
+        <ui_id>3da25d19-437b-4f7f-90d8-a2023e8ed4cd</ui_id>
+        <values>H4sIAAAAAAAA/9VVy27bMBD8FYFnVZDs1Eh8K2L41CZAU+SSpsKKXNkEKFLlw4lr+N+7FGXHSBOkBXqJbtznzHC5utsxKdiczSosP15UMz6tptNJWU7Oz6pmNm2qiZgC4hnLmYYOKdJDo7AeDjnbgArR6HTNg/OmQ+vQbiTHmoOLEUK6XsH29s1AvpZKWNRsfnefsx4sdfBo2Xz3zPW3eBU0qCj0WwT8Cn6/7V+0fT7Nza6Sw1gR8ZQ5w0ePWiABaUE5zFkHWoA3dsvm3gYyWARxrdX2GLGW2lNBFmMfnfxFbc/LGNciMeOYfMfj0HiRtEuudgEebqg698GO4XxtSEGXdBHYQlD+8tSWAq57L41OKQPVMduo0OmrJAs7FjhcFVmCw1pgH7lG9COV9mZtHr4ekC6lHmQZncpwUMcTeG9lE3zEs2OosKNCdQd9L/Wq7q3ZyCGZsHTFStGhaJV5oKZOrnQBPAIvSFoolmRfDOZbsDKy+EJlKHmfM7d1lwqce+JCQtY/Q0SSmI0c6iRDTOFW9v4TNdjgCHefHx6DwPLi1eGqmqdhGubfnTwEAkEIUdTefA9lORW73SXNgidLVfBgSTJfcKO9JW41iE5q6ehAs7Pf/3BrY30kP4Aj6qnGEqRymSMKpFq2MDzcUJMMVhYHQbPW2OxDlr3US4euQaqdZ71CemkUq0jJLPQZDS0pRDP6xyt9pyz+cYW8fcuHFbKUqIR74doP+wM7ks9jncbg2Q4Zndnt6Bz3SPW/9kg1K4fvnW2TRPDdL5OTf8cra+X+N1vHCFJlBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Adhoc Signature Request to User">03a9509cdb961300868f5404ce961954</action_type>
+        <action_type_parent display_value="Send Adhoc Signature Request to User">fa2698d8db961300868f5404ce96194c</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>03a9509cdb961300868f5404ce961954</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>54d0642387459a1078147774dabb3598</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:32</sys_updated_on>
+        <ui_id>a0c426a5-cf67-4c4b-b516-1b2113bff75c</ui_id>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment>Wait until recipient accepts or declines the request</comment>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>5cd0642387459a1078147774dabb3598</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-10 19:03:32</sys_updated_on>
+        <ui_id>4642fa97-1cc2-44a0-ad6b-7dd46dc62e28</ui_id>
+        <values>H4sIAAAAAAAA/+2XXW/bNhSG/0qha9MTJUqWclfYCRYgawAnyy66TuDHYUyMllR9pHWD/PdREh3LVuwlqxMgwC55+KH3vDwPSX2+dyivVJaep2VFUw5Xq/JcOCdOGNDYw0IKxqWYuK4QmARxCAHEIY5l6Iwc1YwjMYeIEhxNsOe62A1Dn1PMmB9y5jIgZlxKl2BGFsCzQpj2HdV1E7i/py4nXkgDxGU4QYQThliAQ4SZh7HPpJwEfAzpHegsh0QJ7D08mAWEKnNNVzd2HRPhC6VFAalz8vnLyMlpYT5ZQeGc3O90PVezpgy0GTpfi95NolrlTVtkvF5CWhlxNnhhZ85sz4fzmekxkxo5eOTA9wpSAUaHpLqEkbOkqaBVVqyck6qoTaAAKi5TvXocsVBp1eW5pN9L9cN82PeacRJMYtx68Ni8pkzDrPOo65IzWtErszqv6uLRskxxKDtbBEha62raj3UDLvOmOropVbOwnZ3pepl+6kxxHhfobUldQiIgb3Jt1HepyatF9m2+Fnqm0tYVm6bOONWPLVpVhWJ11ci5d2p1/ZThXfhpy6XSpgSSVnRSZnXRGjU/nV7OZ8kfH6+nv57Ok/np1fX8fHp92swADe3SS5rnKr1N8iK7U61Ck+9yfKtNYyx19s0kVqrbdNyhMzbbR8dnJj5rwze0UM1HfzPLmMmNyt9T9bWGFiwiJfZxaIocuz4imIUojiBALgSUBB4Jg9BzHkZOuSqnmpblxmOzwcnXurGoc9x6m7Tb06XZVmkzmRcqrz4aeXdgHX0Y/TTqwUFs6IaSnpgN7mWaNJvXOJSUefY3JGuyyyHThwe/EPd/173GvUVnTx6W+EHsoj/3w6euw/LuHebdRjbAd5Q8wXvkvjPebWo/D/yW39u8bzmuyqSreiu6XfWtoPZwFEeE+chnJEAklhJFbkQQAXPFBZ6YEMz/A9Svh/LhG1BuEOBZKlTzqbKPckWruvyzdl1fTLNlrg194q/LeT8+A65VOgjfZKqBYQj8EZY86itA9o6Fad+Ep4yxZ8MgdvHUAvZs8I/1FiCu+95Oh2O9BrYM3z4ctix/k0MARBSywI0QyChCxJ9EKMaeh8KQCowJF9J9tZu9rWhXHKpo2XuLV2oJWV0lUtPbHtfukMv1Mfoytp6hZM3Wadqe4lbRXomWMJZlGmi6e/WacvrlzCq1eJEXXr2H+HpndB3t7t24vXPx9v1+E7Y4p5G5SSmKfQ6IhIyjSHKJfGCB9AMWsYl73Au2rWN+uI7jYbmKuqDtLm6oOsIf6zN0rHmabQTsl2ZpavdmN34xXMgiFfyP1E8jNbB85xd20/FaXC3MvBldlU1lGI6HpAGmk4A1f6UUES/GiMbEQ+YVOQEio9Cn8SuQFuGDFS6H5VzyBYhaw3FJe4aONWlXGwH7pVnSNsW+Ddm8F7eUhUejLBo8DPky7Yvbx1wvs3fJnrwCWvDFmQLd7Kn9edxDZH9rtmHsb87b3HKeh30BHGFhnpHECz0U+WSCJnHEXGLKj/lwRPa+/ANPElad/hUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=d8d0642387459a1078147774dabb357d"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=d8d0642387459a1078147774dabb357d^sys_idNOT IN18d0642387459a1078147774dabb3593,58d0642387459a1078147774dabb3591,5cd0642387459a1078147774dabb3592,9cd0642387459a1078147774dabb3594,d0d0642387459a1078147774dabb3594"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d0d0642387459a1078147774dabb3593</block>
+        <comment/>
+        <connected_to>32d087b3-a860-44d5-a93a-541f24f4cab3</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>18d0642387459a1078147774dabb3593</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:33</sys_updated_on>
+        <ui_id>b4ff2e33-6b80-4493-9330-437c6aa0b0a1</ui_id>
+        <values>H4sIAAAAAAAA/+VUTW/bMAz9K4HOjuGPJN1yK9YVGLCtwFr0shYGLdGJMFnyJDlpZuS/j/JHW6wtVgzDLrtZjxTfexTpjpnWN613V+bUObnRbP31NmJSB4y+O6ahRrZm3GghvTS66IGI7UC1IfBe71CZBmfSzc6QK6lRzPwWNeUI6RoFh+tXpPKtVMLiyN+AJRaPlq27X0L+0GChoERFFS+9lXpD16WgU5VAlb7lKc+zVZ4lSfZmkZarvEwzkQNCRnnTxXeTndnHHole9Bn4CHcTk7EiyEqTiOGdRy2QqCtQDiNWgxbgjT3cIxZBXGj1AGyl9lSOheQ7J39Q7Wy5DIkVkkeOQ5BvjeR40QQlA+KhVFPQqLbWnwfBoc1YQav81GZCWoeFwCaoC3Qjd3W5NfsvE9G51L2TMagMB3V/Ak9+y9ajCy+ACmsqVNTQNNSForFmJ/vLpKWON4oOcaXMnkjDEMXAg/CYmgHxOeFnPXwNVgYXn6gMXR5kluAkL/qBo3LekoVj347iexsEDQZHK8XQDUpw3MrGnxLPDkfVx+jptD4a1K6DhC+yFSznvFqdzBd8Uc7LZbqap2WWpnlZVSdLHuM4pIUUaRY7D751x+NNmyS5mIb26Wj/3eL/YBnS55bhmTV4eQOy32xAeMpXLkCSJP/pBkhXDJM8euvJ/3gBbsO0DwxuGBCBXDoSchWwD9NfPQQO9NKSP4b2xn4LFh6w4095oLeZHwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9cd0642387459a1078147774dabb3590</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>58d0642387459a1078147774dabb3591</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:33</sys_updated_on>
+        <ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</ui_id>
+        <values>H4sIAAAAAAAA/+VUy27bMBD8FUNnWdDDUhrfghYBCrQNUAe5tIGwolY2UYpU+LDjGv73LvVIgsRBn7deDHGWuzOzHPgQKGc7Z821ujCGr2Ww/HIbBlx6jL4PgYQWg2XAlKy55UqWPRAGWxDOF1bUBNZpnGm8c2jszKCkH8cYGtM4IfZ0u+amE7C/+a0mtuGi1jhq6kATs0UdLA/PSnbfYSmgQuFnW83lmtp5TacmhiY5ZwnL0iJL4zh9s0iqIquStM4AIaN7U+PbyeLsQ4+Er3r3fISbiUnp2stK4jDAe4uyRqJuQBgMgxZkDVbp/QOiEeorKR6BDZeWxgX+8r3h32l2muf+YoPkkeFQZBvFGV51XsmAWKjEVFTCtfLTINgvHBtwwk4LJ8QZLGvsvDpPN3I3q43afZ6ILrnsnYxFoRiIhxNY8ls5i8a/AApsaVDZQtfRFspOqy3vm0lLG60FHaJGqB2R+mBFwLzwiJYB0SXh73r4BjT3Lj7SGGoeZFZgOCv7ENI4q8nCsV9Heee8oMHgaKUctkEXDNO8sxfEs8VR9TF8meAn4T0cIGaLtIB8zpribL5gi2pe5UkxT6o0SbKqac5yFhlLYTVJejx+dXGc1ashpy9z/dfz/kXkzyFv8iTOT0d+UZyK/Imwv57z9Cc59w/2izGP4/g/zTk35ZDX0VtP/scxv/WZHhjMEJAaGTck5Npj76f/c1/Y00tz9hTaKf3NW3jEjj8AYliNDhkGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">18d0642387459a1078147774dabb3592</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>5cd0642387459a1078147774dabb3592</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:33</sys_updated_on>
+        <ui_id>32d087b3-a860-44d5-a93a-541f24f4cab3</ui_id>
+        <values>H4sIAAAAAAAA/+VUTW/bMAz9K4HPjuGP2F1zK7oVGLCtwFL0shYGLdGJMFnyJDlpFuS/j/JHW2zpNgy97WY9UnzvUaQPge5c2zl7oy+sFWsVLL/ch4FQHqPvQ6CgwWAZMK24cEKrsgfCYAuy84F3aotStzgTdraiAsgpyIVtJexvf5fDNkJygyNjC4bqOjTB8vBTyO1bLCVUKKnUyhmh1nRdcDrVMdTJOUtYlhZZGsfpm0VSFVmVpDwDhIzypouXk4HZhx4JX3Tm+Qi3E5M23MtK4jDAB4eKk/xlDdJiGDSgODht9o+IQeDXSj4BG6EclQt88oMV36l2muc+sUbyyHAIso0WDK9br2RAHFRyCmrZNerTINj3F2vopJv6S0hnseTYenWebuSuVxu9+zwRXQnVOxmDUjOQjydw5LfqHFr/AiixoUJlA21LXShbo7eiv0xammgt6RDVUu+I1I9NBMwLj6gZEF0R/raHb8EI7+IjlaHLg8wKrGBlP2JUzhmycOzbUX7rvKDB4GilHLpBCZYZ0boL4tniqPoY/jqfz0bzcICYLdIC8jmri7P5gi2qeZUnxTyp0iTJqro+y1mE43SWgidpZB24zh6Pd10cZ/xSN62ksTwx1K9c/TXW4RzyOk/i/PQ6LIpT63BiEV7egfQPO+Af8y9XII7j/3QHhC2HWR699eT/vAL3ft4HBjsMCEcmLAm58dj76U/uA3t6acGeQzttvnoLT9jxB7Ti4XwTBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">58d0642387459a1078147774dabb3594</block>
+        <comment/>
+        <connected_to>9d9c10ed-798a-4c38-953a-bece0bafd253</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>9cd0642387459a1078147774dabb3594</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:34</sys_updated_on>
+        <ui_id>254190ab-9d27-40af-a972-a07a72d7750e</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9cd0642387459a1078147774dabb3593</block>
+        <comment/>
+        <connected_to>32d087b3-a860-44d5-a93a-541f24f4cab3</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <parent_ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>d0d0642387459a1078147774dabb3594</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:34</sys_updated_on>
+        <ui_id>7babbfc7-d6cd-4dcb-9663-2dc416736c50</ui_id>
+        <values>H4sIAAAAAAAA/+VUXW/TMBT9K1We0yhO2g76NjEmIQGT2NQXNkU39k1r4djBdtqVqv+d63xsE6yAENoLb/G59j3nXB/nEJnWN613N+bcObnW0fLzXRxJHTD6PkQaaoyWETdaSC+NLjogjrag2lB4q7eoTIMT6SYrIwUKKgrpGgX71a/28I1UwuLA2IClvh5ttDz8UPL7BgsFJSpqde2t1Gs6LgWtqhQq9poznmeLPEvT7NWMlYu8ZJnIASGjfePBN6OByfsOiU86C3yEu5HJWBFksTSO8N6jDvKXFSiHcVSDFuCN3T8gFkFcafUIbKT21C4Km++d/Ea9s/k8bKyQPHLsi3xjJMerJijpEQ+lGotGtbX+2AsO88UKWuXH+RLSOiwENkFdoBu4q+uN2X0aiS6l7pwMRWU4qIcVePJbth5duAFUWFOjooamoSkUjTVb2R0mLXWyVrRIKmV2RBpikwAPwhMaBiSXhF908AqsDC4+UBs63MsswUledBGjdt6ShWM3juJrGwT1BgcrRT8N2uC4lY0/J54tDqqP8c/5fBLNwwFSPssWMJ/yanE2nfFZOS3nbDFlZcZYXlbV2ZwnOKSzkIJlifPgW3c83rZpmotTif6XrV/gIbDnHsIzT+B0+rPfpD9c4x+GP03T/zT90hV9igdvHflfh/8uJL1ncH1ABHLpSMhNwN6N//BQ2NNNS/4U2hn7JVh4xI7fAVwXby4NBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=d8d0642387459a1078147774dabb357d"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=d8d0642387459a1078147774dabb357d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_d8d0642387459a1078147774dabb357d^sys_idNOT IN1d522ca387459a1078147774dabb3518,d8d0642387459a1078147774dabb358d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d8d0642387459a1078147774dabb357d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:10:21</sys_created_on>
+        <sys_id>1d522ca387459a1078147774dabb3518</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 17:10:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d8d0642387459a1078147774dabb357d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 17:03:44</sys_created_on>
+        <sys_id>d8d0642387459a1078147774dabb358d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 17:03:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_d8d0642387459a1078147774dabb357d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_d8d0642387459a1078147774dabb357d"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_d8d0642387459a1078147774dabb357d"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>c353f666db439700a9c7594e5e961970</copied_from>
+        <copied_from_name/>
+        <description>&lt;p&gt;The flow shows an implementation of Docusign actions for sending a document for digital Signature. The flow is triggered based on a Catalog Item.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Trigger:&lt;/b&gt; The flow is triggered every time a Service Catalog request is created and the catalog request item is 'Send a Document for Digital Signature'.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Flow Steps:&lt;/b&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;b&gt;Get Catalog Variables:&lt;/b&gt; The step retrieves the catalog variables from the Request Item using Get Catalog variables action.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Lookup Attachment Record:&lt;/b&gt; The step retrieves the attachment record of the document attached to Catalog Item.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Send Adhoc Signature Request to User:&lt;/b&gt; The step sends the document to the recipient for Signing.&lt;/li&gt;
+&lt;li&gt;The state of the Request Item is changed based on the state of the Envelope record being Completed, Declined or Voided.&lt;/li&gt;
+&lt;li&gt;Error is logged in case of errors when Sending the Document for Signature.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target="_blank" href="https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information"&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>nowspace_digital_signature</internal_name>
+        <label_cache>[{"name":"Created_1.current.consumer.email","label":"Trigger - Record Created➛NowSpace Contracts Record➛Tenant➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"csm_consumer","column_name":"email","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["recipient_email"]}},{"name":"Created_1.current.consumer.name","label":"Trigger - Record Created➛NowSpace Contracts Record➛Tenant➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"csm_consumer","column_name":"name","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["recipient_name"]}},{"name":"Created_1.current.nowspace_property","label":"Trigger - Record Created➛NowSpace Contracts Record➛NowSpace Property","reference":"x_pamtn_now_space_nowspace_property_listing","reference_display":"NowSpace Property Listing","type":"reference","base_type":"reference","parent_table_name":"x_pamtn_now_space_nowspace_contracts","column_name":"nowspace_property","usedInstances":{}},{"name":"Created_1.current","label":"Trigger - Record Created➛NowSpace Contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","usedInstances":{"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452":["conditions"],"6e39fb88-7c29-4422-a04a-67861bd4bd30":["target_record"],"59a80957-eb78-4130-b5c2-a0c70f942428":["record"],"2f1e6a6b-8521-495c-b6e5-6007127e99d5":["record"],"6415ca4d-7609-4c00-a8da-942fce47e6f1":["record"],"e05d18fc-9185-460c-82ef-28afa2141dfc":["record"],"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["account"]},"attributes":{}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.recipient_email","label":"2 - Send Adhoc Signature Request to User➛Recipient Email","reference_display":"Recipient Email","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b3d46bf9-db1f-4401-94e2-2ec83611746f"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.recipient_name","label":"2 - Send Adhoc Signature Request to User➛Recipient Name","reference_display":"Recipient Name","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9ed169f6-5412-46e9-920b-ec7eee69ccc3"}},{"name":"e05d18fc-9185-460c-82ef-28afa2141dfc.table_name","label":"14 - Update Record➛x_pamtn_now_space_nowspace_contracts Table","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"e05d18fc-9185-460c-82ef-28afa2141dfc.record","label":"14 - Update Record➛x_pamtn_now_space_nowspace_contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6415ca4d-7609-4c00-a8da-942fce47e6f1.table_name","label":"12 - Update Record➛x_pamtn_now_space_nowspace_contracts Table","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6415ca4d-7609-4c00-a8da-942fce47e6f1.record","label":"12 - Update Record➛x_pamtn_now_space_nowspace_contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2f1e6a6b-8521-495c-b6e5-6007127e99d5.table_name","label":"10 - Update Record➛x_pamtn_now_space_nowspace_contracts Table","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2f1e6a6b-8521-495c-b6e5-6007127e99d5.record","label":"10 - Update Record➛x_pamtn_now_space_nowspace_contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"59a80957-eb78-4130-b5c2-a0c70f942428.table_name","label":"8 - Update Record➛x_pamtn_now_space_nowspace_contracts Table","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"59a80957-eb78-4130-b5c2-a0c70f942428.record","label":"8 - Update Record➛x_pamtn_now_space_nowspace_contracts Record","reference":"x_pamtn_now_space_nowspace_contracts","reference_display":"NowSpace Contracts","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d0580dd0-4764-47b3-a593-aa1c5cfe5806.Task","label":"1.4.4.1➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"5c7a8eb8-f792-4dd1-a78c-f99020ec6c6a.Catalog Task","label":"4.2.1➛Catalog Task","reference":"sc_task","reference_display":"Catalog Task","type":"document_id","base_type":"document_id"},{"name":"Service Catalog_1.request_item","label":"Trigger➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"60d37506-5322-4cbd-aa24-0bb577a61d75.select_recipient","label":"2➛select_recipient","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"f04ffb03-b473-4bd9-bd1a-8899be6a1e9c.Record","label":"2➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"f04ffb03-b473-4bd9-bd1a-8899be6a1e9c.Table","label":"2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.status12","label":"2➛Status","reference_display":"Status","type":"string","base_type":"string"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.error_message12","label":"2➛Error Message","reference_display":"Error Message","type":"string","base_type":"string"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.envelope_id12","label":"2➛Envelope","reference":"sn_docusign_spoke_envelopes","reference_display":"Envelopes","type":"document_id","base_type":"document_id"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.envelope_uri12","label":"2➛Envelope URI","reference_display":"Envelope URI","type":"string","base_type":"string"},{"name":"e8b0c4a7-b34a-496a-9b57-82a67c4cf55b.Record","label":"2➛Attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference"},{"name":"e8b0c4a7-b34a-496a-9b57-82a67c4cf55b.Table","label":"2➛Attachment Table","reference":"sys_attachment","reference_display":"Attachment","type":"table_name","base_type":"table_name"},{"name":"Service Catalog_1.request_item.sys_id","label":"Trigger➛Requested Item Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sc_req_item","column_name":"sys_id"},{"name":"e8b0c4a7-b34a-496a-9b57-82a67c4cf55b.Record.file_name","label":"2➛Attachment Record➛File name","reference":"","reference_display":"File name","type":"string","base_type":"string","parent_table_name":"sys_attachment","column_name":"file_name"},{"name":"60d37506-5322-4cbd-aa24-0bb577a61d75.select_recipient.first_name","label":"1➛select_recipient➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"60d37506-5322-4cbd-aa24-0bb577a61d75.select_recipient.email","label":"1➛select_recipient➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"2794ebe7-0303-4e0e-ab1d-8173c360eec5.envelope_id12.status","label":"2➛Envelope➛Status","reference":"","reference_display":"Status","type":"string","base_type":"string","parent_table_name":"sn_docusign_spoke_envelopes","column_name":"status"},{"name":"e8fd0884-20e8-4ecd-bdfc-6d7955a141d4.Catalog Task","label":"4.2.1➛Catalog Task","reference":"sc_task","reference_display":"Catalog Task","type":"document_id","base_type":"document_id"},{"name":"076a07dc-43e0-44fd-bc10-b5b0249e72c0.email","label":"4.3.1➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference"},{"name":"93bedb0b-5305-476d-ab0c-f2e25a871224.record","label":"2.3.1➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"93bedb0b-5305-476d-ab0c-f2e25a871224.table_name","label":"2.3.1➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item","type":"table_name","base_type":"table_name"},{"name":"50a6069e-cea7-4b63-9552-3330cbfb36eb.email","label":"2.4.1➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference"},{"name":"Service Catalog_1.request_item.opened_by.email","label":"Trigger➛Requested Item Record➛Opened by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"Service Catalog_1.request_item.number","label":"Trigger➛Requested Item Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sc_req_item","column_name":"number"},{"name":"Service Catalog_1.request_item.cat_item","label":"Trigger➛Requested Item Record➛Item","reference":"sc_cat_item","reference_display":"Catalog Item","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"cat_item"},{"name":"Service Catalog_1.request_item.cat_item.name","label":"Trigger➛Requested Item Record➛Item➛Name","reference":"","reference_display":"Name","type":"translated_text","base_type":"translated_text","parent_table_name":"sc_cat_item","column_name":"name"},{"name":"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452.Record","label":"1 - Look Up Record➛sys_attachment Record","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["document"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452.Table","label":"1 - Look Up Record➛sys_attachment Table","reference":"sys_attachment","reference_display":"Attachment","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","filter_table_source":"v_cluster_transaction"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.status12","label":"2 - Send Adhoc Signature Request to User➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"Error","order":0.0},{"label":"Success","value":"Success","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3afd5958-d372-4875-bf0b-a5f5fda4e3c3"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.error_message12","label":"2 - Send Adhoc Signature Request to User➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8837f9a7-3ab9-4437-83da-9f5aa5b67924"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.envelope_id12","label":"2 - Send Adhoc Signature Request to User➛Envelope","reference":"sn_docusign_spoke_envelopes","reference_display":"Envelopes","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ca6e9eeb-47e9-4719-9ca6-7f27b719b620"}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.envelope_uri12","label":"2 - Send Adhoc Signature Request to User➛Envelope URI","reference_display":"Envelope URI","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"b7a5aadf-1548-4043-87b8-0765f299e270"}},{"name":"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452.Record.sys_id","label":"1 - Look Up Record➛sys_attachment Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sys_attachment","column_name":"sys_id","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["document"]}},{"name":"ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452.Record.file_name","label":"1 - Look Up Record➛sys_attachment Record➛File name","reference":"","reference_display":"File name","type":"string","base_type":"string","parent_table_name":"sys_attachment","column_name":"file_name","usedInstances":{"a0c426a5-cf67-4c4b-b516-1b2113bff75c":["document_name"],"9e5b756f-eb31-45ed-88e5-fbbaff83e65e":["target_record"],"6e39fb88-7c29-4422-a04a-67861bd4bd30":["document_name"]}},{"name":"a0c426a5-cf67-4c4b-b516-1b2113bff75c.envelope_id12.status","label":"2 - Send Adhoc Signature Request to User➛Envelope➛Status","reference":"","reference_display":"Status","type":"string","base_type":"string","parent_table_name":"sn_docusign_spoke_envelopes","column_name":"status"},{"name":"59a80957-eb78-4130-b5c2-a0c70f942428.Task","label":"8➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"3ab9d28d-56b9-4e5d-beae-84cd2b8d9bef.Task","label":"1.4.3.1➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"7f7e1946-878b-4017-90e9-38a649c65c9c.record","label":"1.4.3.2➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference"},{"name":"7f7e1946-878b-4017-90e9-38a649c65c9c.table_name","label":"1.4.3.2➛Requested Item Table","reference":"sc_req_item","reference_display":"Requested Item","type":"table_name","base_type":"table_name"},{"name":"2f1e6a6b-8521-495c-b6e5-6007127e99d5.Task","label":"10➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"e05d18fc-9185-460c-82ef-28afa2141dfc.Task","label":"14➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"be76c8ca-ad77-4e18-8ba2-b3b4128d09eb.record","label":"1.4.4.2➛Record","reference_display":"Record","type":"document_id","base_type":"document_id"},{"name":"be76c8ca-ad77-4e18-8ba2-b3b4128d09eb.table_name","label":"1.4.4.2➛Table","reference_display":"Table","type":"table_name","base_type":"table_name"},{"name":"6415ca4d-7609-4c00-a8da-942fce47e6f1.Task","label":"12➛Task","reference":"task","reference_display":"Task","type":"document_id","base_type":"document_id"},{"name":"9e5b756f-eb31-45ed-88e5-fbbaff83e65e.status","label":"6 - Look up Document ID by Name➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"Error","order":0.0},{"label":"Success","value":"Success","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9e5b756f-eb31-45ed-88e5-fbbaff83e65e.error_message","label":"6 - Look up Document ID by Name➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9e5b756f-eb31-45ed-88e5-fbbaff83e65e.document_id","label":"6 - Look up Document ID by Name➛Document ID","reference_display":"Document ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6e39fb88-7c29-4422-a04a-67861bd4bd30.status","label":"7 - Attach DocuSign Document to Record➛Status","reference_display":"Status","type":"choice","base_type":"choice","choices":[{"label":"Error","value":"Error","order":0.0},{"label":"Success","value":"Success","order":1.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6e39fb88-7c29-4422-a04a-67861bd4bd30.error_message","label":"7 - Attach DocuSign Document to Record➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6e39fb88-7c29-4422-a04a-67861bd4bd30.attachment","label":"7 - Attach DocuSign Document to Record➛Attachment","reference":"sys_attachment","reference_display":"Attachment","type":"reference","base_type":"reference","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.contract_administrator","label":"Trigger - Record Created➛NowSpace Contracts Record➛Contract administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_pamtn_now_space_nowspace_contracts","column_name":"contract_administrator","usedInstances":{"3da25d19-437b-4f7f-90d8-a2023e8ed4cd":["assignment_group","assigned_to"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛NowSpace Contracts Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_pamtn_now_space_nowspace_contracts","column_name":"number","usedInstances":{"3da25d19-437b-4f7f-90d8-a2023e8ed4cd":["short_description"]}}]</label_cache>
+        <master>true</master>
+        <name>NowSpace Digital Signature</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="NowSpace Digital Signature">d8d0642387459a1078147774dabb357d</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7724f0ef87859a1078147774dabb3595</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:38</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=7724f0ef87859a1078147774dabb3595"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7724f0ef87859a1078147774dabb3595"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=7724f0ef87859a1078147774dabb3595^sys_idNOT IN0c3434ef87859a1078147774dabb3535,c03434ef87859a1078147774dabb3536"/>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <label>Gather data from Catalog Item</label>
+        <order>0</order>
+        <stage_id>8dd6f87f-e20d-488d-b998-bbae55c445d8</stage_id>
+        <states>{"pending":"Pending - has not started","inprogress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>0c3434ef87859a1078147774dabb3535</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <type>standard</type>
+        <value>Gather data from Catalog Item</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>-1</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes/>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <label>Send Signature Request</label>
+        <order>1</order>
+        <stage_id>7bc70860-e9d7-439f-a58e-a1421eae98c3</stage_id>
+        <states>{"pending":"Pending - has not started","inprogress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>c03434ef87859a1078147774dabb3536</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <type>standard</type>
+        <value>Send Signature Request</value>
+    </sys_hub_flow_stage>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=7724f0ef87859a1078147774dabb3595^sys_idNOT INfb24f0ef87859a1078147774dabb3596"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>7724f0ef87859a1078147774dabb3595</id>
+        <name>NowSpace Digital Signature</name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:21</sys_created_on>
+        <sys_id>fb24f0ef87859a1078147774dabb3596</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:21</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=fb24f0ef87859a1078147774dabb3596"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=7724f0ef87859a1078147774dabb3595^sys_idNOT IN7324f0ef87859a1078147774dabb3598,8c34f0ef87859a1078147774dabb35d0"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</model>
+        <model_id>7724f0ef87859a1078147774dabb3595</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7724f0ef87859a1078147774dabb3595</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:21</sys_created_on>
+        <sys_id>7324f0ef87859a1078147774dabb3598</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7324f0ef87859a1078147774dabb3598"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</model>
+        <model_id>7724f0ef87859a1078147774dabb3595</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_7724f0ef87859a1078147774dabb3595</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>8c34f0ef87859a1078147774dabb35d0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8c34f0ef87859a1078147774dabb35d0"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=7724f0ef87859a1078147774dabb3595"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7724f0ef87859a1078147774dabb3595"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=7724f0ef87859a1078147774dabb3595^sys_idNOT IN443434ef87859a1078147774dabb3535"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>443434ef87859a1078147774dabb3535</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxnLdtkkUDbBPUTtuHIBUoamgTpSlXopR4F/n3DnWxZV18iZ1N9mURkxTnzOGZM+Q+fDMF8UGYF+Y98QWYPZNLBZEk4n65ABxWetiTZK7n5kQGRIXR0rxQUQI9M4wCiMwLu2emRCQwWcY3AX6ES7Mvis/NYhp/P3sLMlfSk+GTFy8IBf1X/gcNpYoIVTEuD3i8EGT5V/HVbfg00WuMy8oaOuMiiECaFw+PPXNBIoyoNJpvtSmuIVFGycgBi7q26ziW5Zz3bf/M9W0ncAlYFm5YZ6KWgmohZJ0/PCuQAWAoRkQMLVxFQII7KZarFTOkOidrTp5j/hV3P7f0OgaInUI+R2chp3C3UDyU+UgOKJ8MRTKXtzlQzRswkghV8oYjSQxeAAuNTUcrQrPJLHwal4E+c5mlUUyKkBKx+kWUirifKIg1s4wL5NjLSYjDJMpgjq8v78ZX3t+f7i9/ux574+vJ/fjm8v76ynzJ8vH+S/SOOcICi5en87I67M8chD4pmcx9RNMzYxrxhfpEFU+hgPPSWwsWtRDwjJWGaGk5FW+KtkipPDXL6tQtrWxeavef6z+a0swHD9Pi2RkhAZAOLfqsosVqki3QVEu+1ey2qbIY2UeWfct6a2HmNfJqXc7DAMTVejsTJ6dTVCqXiySziyciVeyp0CNB4FUI00sR0y6h5rm97FRllEj8wFsR39RmRtuKvy88RrgPWFklN9mWOM++FFuOE2mEeEL4j0GTCKlRRmlK7GZOpgWjbAICqKqcNvszrv76nccxl9MK6lXQjINGzFU4VI1RppTHjo8M/vjKwmzym9Z4qxXowdVp24z5wBxrqGvTtlyf2dbQGhAWuJZFnUp1NsF0olS103+TKu2o0TgTmNhDTnUuC5RWVeF7SSPd1FWZrT72wgouTwPNPhE0R0OrWZp7kKet9JcPX23KcFtqJ+7RJEgJfhHsa217uhoTeGfjbd12l6P5hP47jcJEBnWL0XsaXBrrFcZPBX8/n9DdWBjBdgCbK97J19YMlxolcnkCR3OZ7Y+gDxYamYse5g9GI58Sh7Hh2RAcu+Zoaxit2D6Wk+1QUNomwS5XaxVD2qahA/zsCIANbzsY4PGuViiw1dPyuR/DvZ5mID2EGnlC+1PDxKaCB1DOvbqCG1HSdc0eW8XsfEQH9nBIh/hiwCpmffCJ3XcGZDQ8c88HtSpuQNkGU7WQ8F3eEfEyzoB8uIfuW8owBqV0yzi8k0q8VGbfkDxIpZtp7o3MJMLIuA3lLzfrdcYEsEllL8ZTtdR9UOBmkfG2MPxQzRo9HUP/iuMbofVdsIOV93zK1PSQbqZ19FMG+ueDEXPbLYON2ixjDaYb5se5Auyp+rSzftruAvuKOG2thc7m/QpZ1vRQ7epbrh2nIsU+OSnO25HiHn3VKYuu8/32GrA/UFvKLgTH9CYdE7yQVQ35KjRwwsAgBmdG8b9y+Bz3l4aaAVIq8E6LAQ0d/VgnrnaGJpSVgr8vkPyW3OhQOGwUN593bT61Uz/tyxOCIRkM3I4766j+8mwDtAPvx2lFBys9bSucrf3osH3re7Z2pIoMN49+z15z0qzbG85xWbe2nF1ZH99Mtr2bW1B80Dbx+D98yBcCIR4AAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=7724f0ef87859a1078147774dabb3595^sys_idNOT IN003434ef87859a1078147774dabb3524,083434ef87859a1078147774dabb3527,403434ef87859a1078147774dabb3525,403434ef87859a1078147774dabb3526,483434ef87859a1078147774dabb3525,483434ef87859a1078147774dabb3526,803434ef87859a1078147774dabb351e,883434ef87859a1078147774dabb3521,8c3434ef87859a1078147774dabb3534,c43434ef87859a1078147774dabb3520,c83434ef87859a1078147774dabb3522"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Attach DocuSign Document to Record">7aad3e7fdb8f1b00a9c7594e5e96198e</action_type>
+        <action_type_parent display_value="Attach DocuSign Document to Record">72452c77db7ed300dd14596e5e9619a5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>7aad3e7fdb8f1b00a9c7594e5e96198e</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>32d087b3-a860-44d5-a93a-541f24f4cab3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>003434ef87859a1078147774dabb3524</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <ui_id>6e39fb88-7c29-4422-a04a-67861bd4bd30</ui_id>
+        <values>H4sIAAAAAAAA/+2WW0/bMBTHvwrycxMlTdKmfZsoSJU2kCjiBaHo2D4u1lwnc5xCV/Hd5zTpjUsHG3sY4jHH5/r3+cm5XhJgVuZ6rEsLmuFkUY45GZKUx/2YdwNOQzqgQQAD1k8GMSY46IWDMCQdImu/PgKPsC84TUX4xG/AnZ+GGTpPC2aKNjPIclOb56Cq2r5cHhsEizwLfVYZg9o+PLhzLstCweKqdXMWdisVd+dkeH3TIQUYl9iiIcPlo6PXdqaAonKul6vWji7Wrb3QsV0UtdmgQFeKYWv62ma52LG7gLqxsEPw3qLm6DoSoErskBloDjY3CzK0pnIGNz0/12qx8biV2jYTz+C+lD9d0ajb2ak7JFIzyZ1SZMd8CVThqFHNuYy3LmIEFiauGrOV2YiZS4ZlIxhHAZWyx7u2xuG8qLejCbF1gTY6V9VMnzU6kU2CncuqSsw4FvXs9TTtaGJym99thDqVeiVTe6hyBmrHFcGw21OJqr5OXc2o8+0QsNZIWtm6zyWp5OXTW2mMz90LKpy5frIZFIXU06ww+VyuenAjzfypch++UPmd672UU+03dPjuxsA/dfbRynwFRtZifHNpXPBDh5SL8lhBWW4lcQ1lP6p6oEagVoqsUbMOYUYW9osrMMd26ofO3/IYiENbD/F2u1HPUeUF7qEIAYu7PUg8Jnp9L2Yx9WgS9ryQdsMwokL0E+avIzPJw+67sPqKrtesnmzbfjrI2wnt/itCS53xnFX1tmRlkX/HbN1neQDakx2fj0Ct5J/E/obYNDq4+3S76PU+rbSQ++/nABPaT3rCQxqFXpwg99IUE09QCkKkEfYS9HeCn0P2D7O8DfNXjLrGfNQWOhqPXhKghb10y6Wnj0ifrI0t5tF7YZ4GQbAP+gGa/1eIXwB2o/Q+rRutPzyqrH9of2n4zKauvrewTtx87k/XPbTYS3lEqRdBwtxDG4CXshg8CLmIBnFXxEnXb35IfSEVrhI9B+47ZHwbxK8Q4QnEZ40KL4jzFpDjT5A/Qb75BTIyhzq3DgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment>Logging error message to ServiceNow Logs for reference</comment>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>254190ab-9d27-40af-a972-a07a72d7750e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>083434ef87859a1078147774dabb3527</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <ui_id>9ba6c502-208a-431d-a63b-49c3256901b4</ui_id>
+        <values>H4sIAAAAAAAA/+VUXWvbMBT9K8bPcbCdOGnyNpoVCv2AZnQPpQRZuk4EiuRKctIs5L/st+yX7cpWEveD0bDCHgZ+0fGRdM69V+dhGxJquZKX0lgiKUw35pKF4/CMkNEgYQXLacGGccxY0s9GA8gA4VF/EHZC7nhZTpOc0kHWS+K4h19eJGyUxCOg2dmQDZEnyRKQKdR8JmAFAqEVEZXDQGulcc24KQXZ3Hv4q4fpggumQYbjh8dOWBKNJ1nQ4Xj76tdHpQiS4/3j8MrreEea3ZQOogvFKfj1ld92vgeVZk5G3Anh2YJkgPcXRBjohEsiGbFKbw6IBsJupTgCCy4tnhY68rPhP/C+fux4BaAjCs2/w/IbyQVMmgo1v4oJsWRqdUVtpT29EWywHtuDzSgKbpSEIIpaNW/J33WO3EtZqBaLN0vPTNrM70RLLuct8hqRIzltk/etfN1xz+3tsHsMClIJe366g+TDDtJTHPROcNB3Dpri35buJSElcXPjuuZbo0S1lDfNrIUHv/cvhXp08vIpeFOVgRmD0o2amx0/SMV0odZ3+zm54LJW5H8KRYk4rIi1mueVdfXdhiBgiQfNlqQssRCzUqsVrzej2GV3LnDRLYRa46WGz2W3CYkuTjbpXiA+qeF7ormzeY3H4OZdJzQbcy6IMUezOMazp8opaax7D7O6UPUWqnlpv+AFK/ByXfn/LpbS3p+yALKXb38JxpA5tJoc3MFTBcYGVgVTVBxMFK1cyYJC6WCK3ol7ekFBuAAWrLldBPVgBP6sXz+3WxLTfjogWUSLwTDq034e5VkyiJI8TRJUVAwz2q137RUk6W73Ng7/rZjTQvgDhd8/rOtD1d9thQ9ig3NbP9V2EE/34D4HPi2I0yz7vCR+L9vepsVJYfH/ZcHjb5IbsEakCAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update work note with message of Document being signed.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>32d087b3-a860-44d5-a93a-541f24f4cab3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>403434ef87859a1078147774dabb3525</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <ui_id>59a80957-eb78-4130-b5c2-a0c70f942428</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8jPVeX0a7RvE1UlJAYSTLwwFN3YN9SS42S2A3RV//uuY7dUMFDR2ANan+L75XNO7mlu1gyEV7U5Nc6DEXi1cqeSzRiOYTrJZCkLUcovnEuZjcbTCY6RwlPOWY+pUDdCybNpNhHDbDgccD44HmXFZFhkAzkExIzqDFRIlRZFbSWd70G3IbBen1gEjzLP+qK1Fo3fbCgvlWs0rK5TGUXEUmlJeTa7ue2xBixN9GjZbP0sdSgkDQVqKr3cYnqO0a+acJa1aCvClatt8Cx1zlPm6HROGWoKcDLeY/jo0UgkICVohz1WgZHga7tiM29bChBpeWH0alexVMZHohU8OvWLbh7xUFciMRNJhN3xOxQa51GkmCrn4OGKpgvf2p1mtRLooi4SS2i1P9mPxYKLJrz92OLD4NRd67Yy51EVthuw905ah7nEJnAN6CO18mpZP1xugS6U6WRJNHUtQO9O4L1VResDnDVDjZ3OFTSNMnd5Y+t71TUTlKp/p+nQL3X9QHc6dWf6cWv7pCz0FxSfd+FrsCqQ+EZjqHnTY27lTjQ490SFdMx/tgFJJJYo5J0KnQR5tw2hWVjV+K901T0m4Jve3zqmGL+1nmL6tI17YJ5c85g3UHmTG9LCNSAwPMUHURtvCZx7aaIDu95ntAOYbI3W7ewrzJLXXsTO9nuPzmMiOW38YU47/mxOS1Q+vdX+mcH44M3//7017Dzl9szl2oLu9Pij5XwoiRlpg/KlnV6te5+BDkC6NdBCoZbuD9C37sGKAHrMI5VnDkrJo+uU3H2vPsxG2YR3v09mpv/ms3X7G+DF88jqCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update work note with message of Document being voided.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>12</order>
+        <parent_ui_id>7babbfc7-d6cd-4dcb-9663-2dc416736c50</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>403434ef87859a1078147774dabb3526</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <ui_id>6415ca4d-7609-4c00-a8da-942fce47e6f1</ui_id>
+        <values>H4sIAAAAAAAA/+VVTU/jMBD9K8jnqkqatpDeEBUSEgsSrLiwKJrYE7DkOFnbAbpV//uOY/dDsKCiZQ9oe4rny++9zGtulwy4k40+09aB5ni9sGeCzVg5StLx4WEmSl6lZZJAzg8n+RgnmE/TPC/ZgElfN0aRpHk65VmaZaMkGR2N03KalelIZICYUp2GGqnSIG+MoPMjqM4HlssTg+BQFOmQd8agdqsV5YW0rYLFTSyjCH+QSlCezW7vBqwFQxMdGjZbvkjtC0lBiYpKr9aYXmJ0i9afRcO7mnAVch08j53zmDk4m1OGmjycNBkwfHaoBRKQCpTFAatBC3CNWbCZMx0FiLS41GqxqXiQ2gWiNTxb+YtuHie+rkJixqMIm+N3KBXOg0ghVc3BwTVN564zG80aydEGXQRW0Cl3shsLBZetf/uhxfnBsbtRXa0vgipsM2DnnXQWC4Gt5+rRB2rV9UPzdLUGeip1L0ukqRoOanMC54wsO+fhLBkq7HWuoW2lvi9a0zzKvpmg1MN7RYdhpZonutPKez0MWzskZWF4SvF5H74BIz2JbzSGmlcDZhf2RIG1WyqkY/Gz80gCsUih6FXoJSj6bfDN3MjWHdNVjxiBrwZ/65hy8t568ny7jTtgtq55LlqonS40aWFb4OifwgNvtDMEzr420Z5dHzPaHkzWRut39g1m0WuvYue7vQcXIRGdNvk0px19NadFKl/eav/MYMno3f//nTXsPWV3zEUXOvzRJUkmuL9aKRSvzfRG1cfMswfKtXlOJSph/wB77RysCZ7DItB44Z6YPLiJyc236tMslE6T/vfFjPTffLLufgNZuK4a5gkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update work note with message of Document being declined.</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>10</order>
+        <parent_ui_id>b4ff2e33-6b80-4493-9330-437c6aa0b0a1</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>483434ef87859a1078147774dabb3525</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <ui_id>2f1e6a6b-8521-495c-b6e5-6007127e99d5</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8jPVZX0i7ZvExUSEgMJJl4Yim7sm9aT42S2A3RV//uuY/dDZaCisQe0PsX3y+ec3NPcrxhwJyt9oa0DzfF2aS8Em7LBAMenUJyKfFykeZLAhJ8OJwMc4mSUTlCwDpNtHYoknaQj3k/7/V6S9MaDNB/187Qn+oCYUp2GEqnSIK+M73sE1fjAanVmEByKLO3yxhjUbr2mvJC2VrC8i2UU4QupBOXZ9P6hw2owNNGhYdPVQepYSApyVFR6s8F0iNEta38WFW9KwpXJTfAyds5i5uRiRhlq8nDSpMPw2aEWJNC0AGWxw0rQAlxllmzqTEMBIi2utVpuKxZSu0C0hGcrf9HNg8TXFUjMeBRhe/wGucJZECmkihk4uKXp3DVmq1klOdqgi8ACGuXO9mOh4Lr2bz+0OD84dleqKfVVUIVtB+y9k8ZiJrD2XD36QK24XVRPNxug51K3skSaquKgtidwzsi8cR7OiqHCVucS6lrqeVab6lG2zQSl7M4VHbqFqp7oTivnuhu2tkvKQvec4rM2fAdGehJfaQw1rzvMLu2ZAmt3VEjH7GfjkQRikULWqtBKkLXb4Ju5kbX7Qlc9YgS+7vytY/LhW+vJJ7tt3AOzc81zVkPpdKZJC1sDR/8UHnilnSFw9qWJjux6n9GOYLIxWruzrzCLXnsRu9zvPbkKiei04Yc5bfzZnBapfHqr/TODJb03///31rD1lN0zl21yutPh9yZJ+rTtP5C7dvCBnV6te5+BjkC6MdC5RCXsH6Bv3IMlAXSYBSoHDorJk7uY3H6vPsxG6Shpf5/MTP/NZ+vhN2JDZ/HqCQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment>Update request item with error details</comment>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>14</order>
+        <parent_ui_id>254190ab-9d27-40af-a972-a07a72d7750e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>483434ef87859a1078147774dabb3526</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <ui_id>e05d18fc-9185-460c-82ef-28afa2141dfc</ui_id>
+        <values>H4sIAAAAAAAA/+VVXU/bMBT9K8jPVZX0i7ZvExUSEgMJJl4Yim7sG7DkOJk/Cl3V/77r2C0VbKho7AEtL4nvh33OyT3J7ZoBd7LRZ9o60ByvV/ZMsDnLRzgtoToW5bTKyyyDGT8ez0Y4xtkkpzvrMRnqRiiyfJZP+DAfDgdZNpiO8nIyLPOBGAJiTnUaaqRKg7wxgtZLUD4E1usTg+BQFHmfe2NQu82G8kLaVsHqJpVRhD9IJSjP5rd3PdaCoR0dGjZfv0gdCklBiYpKr7aYXmJ0qzasRcN9TbgKuQ2ep85FyhydLShDTQFOnvUYPjnUAglIBcpij9WgBbjGrNjcGU8BIi0utVrtKh6kdpFoDU9W/qSTR1moq5CY8STCbvkNSoWLKFJMVQtwcE27c+fNTrNGcrRRF4EVeOVO9mOx4LINbz+2uLBx6m6Ur/VFVIXtNth7J95iIbANXAP6SK26fmger7ZAT6XuZEk0VcNB7VbgnJGldwHOmqHCTuca2lbq+6I1zVJ2zQSl7t8rWvQr1TzSmVbe636c2j4pC/1Tii+68A0YGUh8pW2oedNjdmVPFFj7TIV0LH74gCQSSxSKToVOgqKbhtDMjWzdFzpqiQn4pve3jinHb40nnz1P4x6YZ9c8FS3UTheatLAtcAxP8YE32hkCZ1+b6MCu9xntACZbo3Uz+wdmyWuvYuf7vUcXMZGcNv4wp00/m9MSlU9vtX9msGzw5vd/bww7T9k9c1lf0pkOv/ssGwofNC0MLiU+vrbUm7XvM9IBiLdGOpWohP0Nha2LsCaQDotI6YWTUvLoJiV3/60Ps1M+ybrrk5nqv/l93f0Cp4AIcfIJAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>Retrieve the attachment record of the document attached to the Catalog Item</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>803434ef87859a1078147774dabb351e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <ui_id>ae68d3bb-3a5c-4c0a-8c4a-a1df3942f452</ui_id>
+        <values>H4sIAAAAAAAA/+VYXW/jKBT9K5af06ydb/dt1ShSpdmpNO3Oy+wIYcANWoI9gNtJo/z3vRg7sRLnw2oqpdpHLhc4995zLtg/Vj4mhqfyXmqDJWGPS31P/Vt/GOGoF9KExiSh4yCgNBwMoxEbsmgURpT6HZ9bPxoFURJFwwn49PtBMBr1CQ7juD8icRDjAfhJvGDgaXAsGAxfsMjtWC81wsZgMl8waWCCcp0JvPx+aJ7MuaCKSf/2x8+On2EF+xqm/NvVztS5wASOmQDXpxLZDlCzzDZDVMw525f6Mu+rm0gVtVCCjs9+GyYpAwwJFpp1/AWWFJtULTcWxTB9kGJrmHOI8Nb3rfNvzd/g3Elg/RIGURHm5jbD4uSpS5ebSqbY4EejcmJyVbqTecoJ0y4nlCU4F+aubnMOD5mtv1viQnerU5Ev5FeXEn+zQVUdsOSaIcoyG6xFX4aSPM7T128V0hmXRV7KSZESLDYjqK7icW4snpXPBLOFRgucZVw+o0ylL7xYDFgW3WcBg24i0lc4VPNn2XXE7UJucXcG9mlh/o4Vt1H8BdvAYgDEBbAEuTLqNFdFOl8QEbkuJhSW2u3lrzuWdncCa72NHNKOfuUWt8tDGTFySbNLiOKZ+RO2eGFlcOvOu4U1PMrfaMtXkkrK7VG6pq4yXNAQp//ksAVdre6Ad4ZRFHZJrqA8Zr3el935C1vq8XQ8lR7v6gE1BVkqc8/2pWmDUpnhxZQ5CILPpk04/Pqk2V5sLgXNiquMBf229YdRkzzX7xdoSI8Smm65q1NlkKtZTaH70mutqTMgVJp6sCrw4uUhVKWkEs4EbbrsZnZi57Lr/X8vu6sUFACiyFWQS8Fl0c4B6IWV9n7pDI/yNg53SFpws/ZwtDasyb6AsGdS7621jM6AU8noEc72nhyeBojVxVRwbfdSqoylevoXU0+/dzn1rDahbpLZkPfqtWupUPm/WX+86w/8rS0I103qbHVm2PbM3npf/f1W8q8Tzs1MD/Duwk/iA3LufGT/mMPS8jzkxI9eOX1mZnt65UVT84rFv03zpTBRVagivGt6XodHPw/j2vOaJ2gBJecZPIsVI8Aq+C5VDCVpLikqPxy2DLQUSLjSpnTe71LfGAhPeimo2jNz5hXe3sa75RPgdBxVDe4TrwqkPE17EIhXBOJtAmkXdpuON7jgE/wjOt4Mc1FUBL4Ls1pJmVKpOtD1ThTzCCvObIlnggovCur9PbNJBo298wTWT/GT4Yr6GmE4HvTwaNwPwyAIA/CdjMfhZBQnIzweJFuBI6QlgR4OkBLgGOBCFacqggT7zcs18rZd6gxUFXenqbS/HXpj41lYQAyvgnUaeNmN4jQVDMuddvQEt9MfsxJ/SfThVbakT/G/LudPu9l2psZ8f9SLJed/S/4rZ4VIJizoTUJKbibjcHwzSOjoJqJ4eIOjeDjuU0YGySUfIT//Az74ytg+FwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Wait For Condition">89ce8a4187120010663ca1bb36cb0be3</action_type>
+        <action_type_parent display_value="Wait For Condition">8bb9a8160b10030085c083eb37673aec</action_type_parent>
+        <attributes/>
+        <comment>Wait until recipient accepts or declines the request</comment>
+        <compiled_snapshot>89ce8a4187120010663ca1bb36cb0be3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>883434ef87859a1078147774dabb3521</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:38</sys_updated_on>
+        <ui_id>4642fa97-1cc2-44a0-ad6b-7dd46dc62e28</ui_id>
+        <values>H4sIAAAAAAAA/+2XXW/bNhSG/0qha9MTJUqWclfYCRYgawAnyy66TuDHYUyMllR9pHWD/PdREh3LVuwlqxMgwC55+KH3vDwPSX2+dyivVJaep2VFUw5Xq/JcOCdOGNDYw0IKxqWYuK4QmARxCAHEIY5l6Iwc1YwjMYeIEhxNsOe62A1Dn1PMmB9y5jIgZlxKl2BGFsCzQpj2HdV1E7i/py4nXkgDxGU4QYQThliAQ4SZh7HPpJwEfAzpHegsh0QJ7D08mAWEKnNNVzd2HRPhC6VFAalz8vnLyMlpYT5ZQeGc3O90PVezpgy0GTpfi95NolrlTVtkvF5CWhlxNnhhZ85sz4fzmekxkxo5eOTA9wpSAUaHpLqEkbOkqaBVVqyck6qoTaAAKi5TvXocsVBp1eW5pN9L9cN82PeacRJMYtx68Ni8pkzDrPOo65IzWtErszqv6uLRskxxKDtbBEha62raj3UDLvOmOropVbOwnZ3pepl+6kxxHhfobUldQiIgb3Jt1HepyatF9m2+Fnqm0tYVm6bOONWPLVpVhWJ11ci5d2p1/ZThXfhpy6XSpgSSVnRSZnXRGjU/nV7OZ8kfH6+nv57Ok/np1fX8fHp92swADe3SS5rnKr1N8iK7U61Ck+9yfKtNYyx19s0kVqrbdNyhMzbbR8dnJj5rwze0UM1HfzPLmMmNyt9T9bWGFiwiJfZxaIocuz4imIUojiBALgSUBB4Jg9BzHkZOuSqnmpblxmOzwcnXurGoc9x6m7Tb06XZVmkzmRcqrz4aeXdgHX0Y/TTqwUFs6IaSnpgN7mWaNJvXOJSUefY3JGuyyyHThwe/EPd/173GvUVnTx6W+EHsoj/3w6euw/LuHebdRjbAd5Q8wXvkvjPebWo/D/yW39u8bzmuyqSreiu6XfWtoPZwFEeE+chnJEAklhJFbkQQAXPFBZ6YEMz/A9Svh/LhG1BuEOBZKlTzqbKPckWruvyzdl1fTLNlrg194q/LeT8+A65VOgjfZKqBYQj8EZY86itA9o6Fad+Ep4yxZ8MgdvHUAvZs8I/1FiCu+95Oh2O9BrYM3z4ctix/k0MARBSywI0QyChCxJ9EKMaeh8KQCowJF9J9tZu9rWhXHKpo2XuLV2oJWV0lUtPbHtfukMv1Mfoytp6hZM3Wadqe4lbRXomWMJZlGmi6e/WacvrlzCq1eJEXXr2H+HpndB3t7t24vXPx9v1+E7Y4p5G5SSmKfQ6IhIyjSHKJfGCB9AMWsYl73Au2rWN+uI7jYbmKuqDtLm6oOsIf6zN0rHmabQTsl2ZpavdmN34xXMgiFfyP1E8jNbB85xd20/FaXC3MvBldlU1lGI6HpAGmk4A1f6UUES/GiMbEQ+YVOQEio9Cn8SuQFuGDFS6H5VzyBYhaw3FJe4aONWlXGwH7pVnSNsW+Ddm8F7eUhUejLBo8DPky7Yvbx1wvs3fJnrwCWvDFmQLd7Kn9edxDZH9rtmHsb87b3HKeh30BHGFhnpHECz0U+WSCJnHEXGLKj/lwRPa+/ANPElad/hUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>16</order>
+        <parent_ui_id>254190ab-9d27-40af-a972-a07a72d7750e</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>8c3434ef87859a1078147774dabb3534</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <ui_id>3da25d19-437b-4f7f-90d8-a2023e8ed4cd</ui_id>
+        <values>H4sIAAAAAAAA/9VVy27bMBD8FYFnVZDs1Eh8K2L41CZAU+SSpsKKXNkEKFLlw4lr+N+7FGXHSBOkBXqJbtznzHC5utsxKdiczSosP15UMz6tptNJWU7Oz6pmNm2qiZgC4hnLmYYOKdJDo7AeDjnbgArR6HTNg/OmQ+vQbiTHmoOLEUK6XsH29s1AvpZKWNRsfnefsx4sdfBo2Xz3zPW3eBU0qCj0WwT8Cn6/7V+0fT7Nza6Sw1gR8ZQ5w0ePWiABaUE5zFkHWoA3dsvm3gYyWARxrdX2GLGW2lNBFmMfnfxFbc/LGNciMeOYfMfj0HiRtEuudgEebqg698GO4XxtSEGXdBHYQlD+8tSWAq57L41OKQPVMduo0OmrJAs7FjhcFVmCw1pgH7lG9COV9mZtHr4ekC6lHmQZncpwUMcTeG9lE3zEs2OosKNCdQd9L/Wq7q3ZyCGZsHTFStGhaJV5oKZOrnQBPAIvSFoolmRfDOZbsDKy+EJlKHmfM7d1lwqce+JCQtY/Q0SSmI0c6iRDTOFW9v4TNdjgCHefHx6DwPLi1eGqmqdhGubfnTwEAkEIUdTefA9lORW73SXNgidLVfBgSTJfcKO9JW41iE5q6ehAs7Pf/3BrY30kP4Aj6qnGEqRymSMKpFq2MDzcUJMMVhYHQbPW2OxDlr3US4euQaqdZ71CemkUq0jJLPQZDS0pRDP6xyt9pyz+cYW8fcuHFbKUqIR74doP+wM7ks9jncbg2Q4Zndnt6Bz3SPW/9kg1K4fvnW2TRPDdL5OTf8cra+X+N1vHCFJlBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Adhoc Signature Request to User">03a9509cdb961300868f5404ce961954</action_type>
+        <action_type_parent display_value="Send Adhoc Signature Request to User">fa2698d8db961300868f5404ce96194c</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>03a9509cdb961300868f5404ce961954</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>c43434ef87859a1078147774dabb3520</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:38</sys_updated_on>
+        <ui_id>a0c426a5-cf67-4c4b-b516-1b2113bff75c</ui_id>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look up Document ID by Name">a7f007ffdb475b00dd14596e5e9619f2</action_type>
+        <action_type_parent display_value="Look up Document ID by Name">04ef3b1fdbb2d300dd14596e5e961981</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>a7f007ffdb475b00dd14596e5e9619f2</compiled_snapshot>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>32d087b3-a860-44d5-a93a-541f24f4cab3</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>c83434ef87859a1078147774dabb3522</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <ui_id>9e5b756f-eb31-45ed-88e5-fbbaff83e65e</ui_id>
+        <values>H4sIAAAAAAAA/9VTXU/bMBT9K5Of0yhJk4b2baJDQtqGRBEvCEU39nVrzXUy2yl0Vf/77CQtgdGJiT1sjz4+9+vce+52BKgVlbpUxoKiuNiaS0ZmpEzTPGJJxMq4nJZRBFOaZ9MUM5xO4ikyEhDR8sY8inLOWZnmmeMxFqfZdNLzeOZ4CtbomKg2KKsaC+GDNyAbj+52ENE0mUA2onySj1KalqMyiyejuEzieFxynmc0HATHyX7vEjBhagnb2z6PQ+hKSKZRkdndfUBq0K6uRU1muxdfb21cQonSUT/1xU/NYre1BzVydDUo9tDnPvx6gFea+Y7igOCjRcWckDMO0mBA1qAY2EpvyczqxgEagV0puT0yVkLZbtQ1PBrxwxUdJ8Gg7owYVbCKNkYsVWHq6hsWh1YNGTBvoJQ47xQcDOg5fA4WFq4Daht9VLYS1P226jHk0Eh7PsQ6wlXtL6kLsb5CH13JZq2+dsqRY4LB5hqDBcPa6+En7Mfli1X1cBTvQqhWuv5TVhTkgIqg6epCoPS7bbcC1mpRNtb3uCONuPl1Sx342p5Q4tr1UqyhroVaFrWuNqKt78ZZh0vpHiGX1YPr24sddi4K3QYhvHD4vIVvQQsvxBeXxgXvA2K25lyCMU9yuIaK740fphOnl6HolPQhVIvafnQFNthPvA/e61ue8yg9ef7R2dOtW9BLtIVG6o73uXNxcsbGZTkaQ0adcyMYndEURhAzPp6mCU+zJLxu40IuJBY+42vmfU+qP3P9G8Y+uH7ufORv4EO7qpNy9OY37tjU8oXzFwewt33yt2wfR1H03Pi/cff/auoTBj4q/dy9R63/deve/wQ7lrVndAcAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=7724f0ef87859a1078147774dabb3595"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=7724f0ef87859a1078147774dabb3595^sys_idNOT IN003434ef87859a1078147774dabb351d,0034f0ef87859a1078147774dabb35db,0434f0ef87859a1078147774dabb35dc,443434ef87859a1078147774dabb351c,cc34f0ef87859a1078147774dabb35dc"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">58d0642387459a1078147774dabb3594</block>
+        <comment/>
+        <connected_to>9d9c10ed-798a-4c38-953a-bece0bafd253</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>13</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>003434ef87859a1078147774dabb351d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:38</sys_updated_on>
+        <ui_id>254190ab-9d27-40af-a972-a07a72d7750e</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9cd0642387459a1078147774dabb3590</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>0034f0ef87859a1078147774dabb35db</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:38</sys_updated_on>
+        <ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</ui_id>
+        <values>H4sIAAAAAAAA/+1VTU8bMRD9K8jnTbQf2VC4IRBSJVqkBnFp0WrWOyZWHXvxB5BG+e8drzcBFaoWlWMvUfzsmXnv2U+7YSb4Pnh3ZU6ck7eaHX+9yZjUEaP/G6ZhheyYcaM76aXRzQBk7B5UiBsLKgIfLB5YvAvo/IFDTT+Bc3ROBKXWdLqTrlewvn5TEV9K1VkcOfVgabJHy443v2zJjnqKHERxxAtelfOqzPPyw6xo51VblF0FCBU1VNCioqOnOzEHFwOS/ValX/cRd95KfTuuL8Yuix1obBdZFXnG8NGj7pD4CFAOM7YC3YE3dr1HLEJ3qdUTsJTaUzsWDz86+YMGlnUdDwokiRzT5n55Ba3Cs2Ro2hJn4IHoBB49TRhfGklmJoM6FBCUP32OpQOXfZSbSnxsPFYbFVb6c3KF7Rvs7o+Q4LDpsI9qI/1Ri1gszcOXHdNzqQdnxk1lOKj9Cjz51wYf+WwYKlxRo2YFfU+uNr0193IoJi6r6a2ixVQo80BD4zudAo/Ep2QuTM8JPxvga7AyqvhEbag40WzBSd4Mb5rakU3Ithlza3eqwLknkeRwcxcixSR5FNckf2IJt7L3JzT5Hkcd2+xlRJ6lY7OBnM/KOdQTLuaHkxmftZO2LuaToi2LomqFOKz51HlKgyvK7fZbyPOqW6QgvAzOP/d7W6aOoBZ1kdevZ2o2fy1Tr6TpjUEq/xCkeIN/maM8z/8H6V2CJF2Tnv+obRj+jjm6iaFJM/dec+mI2nBNH3dfpLixpgcm+XPowdjvUdQTtv0J1hUdkdsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">18d0642387459a1078147774dabb3592</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>0434f0ef87859a1078147774dabb35dc</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:38</sys_updated_on>
+        <ui_id>32d087b3-a860-44d5-a93a-541f24f4cab3</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYBnWdDDUhrfArsBCqQNUAe5NIGwIimbKEWqImXHNfzvXYryA637COBjb+bscnZmxYG3RHe26ax51LfGiIUiky8vARHKYfh7SxTUnEwI1YoJK7QqeiAgK5CdK7xXKy51w6+EuZojAWdYZMI0EjZPf+qhSyFZy4eJDbTIa3lLJtufSoIhRRVBFd/QmKZJniZRlLwbx2WelnHCUuCQIqGEkktsne6lXt33SPBbD3bTONzYVqjFcL4fWOZ7ULfMqYqjgPBXyxVD9ZMKpOEBqUExsLrdHJCWA3tQ8ggshbJIR1zzqxHfcWCSZa6x4miRcl88HB+hlHzm9+dL1QwsoJyO2q4d2ulSC8qNXxDjFXTSTk8x3/DQOLv+inXEw20tu1p98lshB4L950KkM7xgvHFunfzBSzVf6vXnvdI7ofrNDEWpKcjDCSzur+ys07MlXPIaiYoamga3WjStXon+Mmqpw4XEQ1hJvcah7hWGQJ3wEJcL4R3isx5+glY4Fx+RBi97mSUYQYv+xSIdromTXUDMxkwlGHM0iRsuvnVOorc8mCv8ftwV2orG3uLkFR987IJfA3Dy9rdbiOg4ySEb0Sq/Ho3puByVWZyP4jKJ47SsquuMhnx4/oVgcRIaC7Yzu91zF0Upm+q6kfjuz6Tmwuxvy9sNZFUWR9n5vI3zc3k7k7Q3hiz5S8jc1/3HjEVR9D9kFwmZMIWPxuCtH37BjL24QPmZh11TYVBa/5k+7P+LXGGDD0zQU2it26/O1BHb/QCnjpmT1QYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9cd0642387459a1078147774dabb3593</block>
+        <comment/>
+        <connected_to>32d087b3-a860-44d5-a93a-541f24f4cab3</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>11</order>
+        <outputs_assigned/>
+        <parent_ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>443434ef87859a1078147774dabb351c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:38</sys_updated_on>
+        <ui_id>7babbfc7-d6cd-4dcb-9663-2dc416736c50</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYBnWdDDdlrfArsBCqQN0AS+tIGwIimbKEWqImnHFfzvXYryA23SB+Bjb+bscndmxIE7op1tnDWP+sYYsVJk9vkpIkJ5DH93REHNyYxQrZiwQquiByKyAel84Z3acKkbfiXM1VILxhkWmTCNhN3ydz10LSRr+bCxgRbnWt6SWfdTSTAcUSVQpW9pSvNsmmdJkr0Zp+U0L9OM5cAhw4ESSi6xdX6genXXI9GrGuyu8bixrVCr4Xw3THk4gLplnlWaRIQ/W648+1kF0vCI1KAYWN3ujkjLgd0reQLWQlkcR3zzsxHfcWE2mfjGiqNEykPxeHyEUvJF8C+UqgVYQDqOWtcO7XStBeUmGMR4BU7a+TkWGu4bLzdcsX7wcFtLV6uPwRVyHHD4XIg4wwvGG6/W0x+0VA9rvf10YHorVO/MUJSagjyewKJ/pbOeT0e45DUOKmpoGnS1aFq9Ef1l5FLHK4mHuJJ6i0v9K4yBeuIxmgvxLeKLHl5CK7yKDzgGLweaJRhBi/7F4ji0iZN9RMzOzCUYcxKJDhffnKcYJA/iiuCPv0Jb0dgb3Lzhg4599GsAzt5+10FCx9kUJiNaTa9HYzouR+UknY7SMkvTvKyq6wmN+fD8C8HSLDYWrDP7/ReXJDl7LTKXHH3RpKUvJe2FjP1jvLI/xMt/179MV5Ik/+N1kXgJU4RQDNr65RdM15OPUth59JoKg9T6z/T+8C/kCzt8YIKeQ1vdfvWiTtj+B73bdS7PBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d0d0642387459a1078147774dabb3593</block>
+        <comment/>
+        <connected_to>32d087b3-a860-44d5-a93a-541f24f4cab3</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="NowSpace Digital Signature">7724f0ef87859a1078147774dabb3595</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id>9d9c10ed-798a-4c38-953a-bece0bafd253</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>cc34f0ef87859a1078147774dabb35dc</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:38</sys_updated_on>
+        <ui_id>b4ff2e33-6b80-4493-9330-437c6aa0b0a1</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8FYNnWdDDdlrfArsBCqQN0AS5tIGwIlc2UYpURcqOa/jfu9TDNpoUTQEfezNnl7szQw28Z6ZxVePsg7m2Vq40m399CpjUHqPfe6ahRDZn3GghnTQ6a4GAbUA1vvBBb1CZCkfSjpbIldQoRm6NmnqEtJWC3eMbWvlaKlFjv7+CmrY4rNl8/1tJCppURFDE73nM02SWJlGUvJvE+SzN40SkgJDQQAU5KmpdDMRHty0S/FGR21Uet66WetWfb/sp9wNoauFZxVHA8NmhFkh8ClAWA1aCFuBMvTsiNYK40+oErKV2NI755mcrf9LCZDr1jQWSRI5d8Xh8gFzhsrOxKxVLcEB0Gu6aum/nayM52s4ggQU0yi3Osa7hrvJyuyvOD+5vG9WU+nPnCjsOGF6NkMZiJrDyaj39XktxvzbbLwPTG6lbZ/qiMhzU8QSO/Msb5/nsGSosaVBWQlWRq1lVm41sLxOXMlwpOoSFMlta6r/JELgnHpK5EN4QvmzhR6ilV/GJxtDljmYOVvKs/X5pHNmE7BAwu7MLBdaeRJLD2Y/GU+wk9+Kyzh9/hdeycte0eYO9jkPwMg5nSdjvIeKTZAbTMS9mV+MJn+TjfBrPxnGexHGaF8XVlIfYpyCTIk5C68A19nD41kRRKoZUvMzOZYdfNG3xa2l7JWf/GLHkLxHzb/vGhEVR9D9iF4mYtFkXjF5bu/yCCXvycep2Hr3m0hK19pk+Dv9LvrCjD0zyc2hr6u9e1Ak7/AK0gWKr4QYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7724f0ef87859a1078147774dabb3595"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=7724f0ef87859a1078147774dabb3595"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_7724f0ef87859a1078147774dabb3595^sys_idNOT IN0834f0ef87859a1078147774dabb35d5,4034f0ef87859a1078147774dabb35ce"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7724f0ef87859a1078147774dabb3595</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>0834f0ef87859a1078147774dabb35d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_7724f0ef87859a1078147774dabb3595</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:22</sys_created_on>
+        <sys_id>4034f0ef87859a1078147774dabb35ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:28:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_7724f0ef87859a1078147774dabb3595"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_7724f0ef87859a1078147774dabb3595"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_7724f0ef87859a1078147774dabb3595"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>d8d0642387459a1078147774dabb357d</sys_id>
+        <latest_snapshot>7724f0ef87859a1078147774dabb3595</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch1-hotfix1-09-27-2024_10-01-2024_0622.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=d8d0642387459a1078147774dabb357d^sys_idNOT IN3c3474ef87859a1078147774dabb350f"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"3c3474ef87859a1078147774dabb350f","name":"plan","plan_signature":null}}</plan>
+        <plan_id>d8d0642387459a1078147774dabb357d</plan_id>
+        <snapshot>433cb06f87c59a1078147774dabb357a</snapshot>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 18:28:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3c3474ef87859a1078147774dabb350f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:41</sys_updated_on>
+        <trigger display_value="">ab7ae06b83891a1035e174efeeaad352</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=d8d0642387459a1078147774dabb357d"/>
+</record_update>

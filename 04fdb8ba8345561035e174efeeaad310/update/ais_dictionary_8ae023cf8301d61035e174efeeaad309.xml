@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_dictionary">
+    <ais_dictionary action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <auto_refresh>24</auto_refresh>
+        <blocked_field/>
+        <case_sensitive>false</case_sensitive>
+        <data_source>cmn_location,sn_customerservice_case</data_source>
+        <derived>true</derived>
+        <field/>
+        <label>space Search Profile Default Spell Check Dictionary</label>
+        <last_derived>2024-10-13 19:26:56</last_derived>
+        <locale>en</locale>
+        <name>x_pamtn_now_space_space_search_profile_default_spell_check_dictionary</name>
+        <publish_id>f79e4824-3031-40b8-9f0d-af853e124548</publish_id>
+        <punctuation_sensitive>false</punctuation_sensitive>
+        <state>PUBLISHED</state>
+        <sys_class_name>ais_dictionary</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 17:46:02</sys_created_on>
+        <sys_id>8ae023cf8301d61035e174efeeaad309</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_pamtn_now_space_space_search_profile_default_spell_check_dictionary</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>ais_dictionary_8ae023cf8301d61035e174efeeaad309</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 17:46:02</sys_updated_on>
+        <type>SPELLCHECK</type>
+    </ais_dictionary>
+</record_update>

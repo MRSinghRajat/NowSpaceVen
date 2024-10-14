@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_user_metadata">
+    <par_dashboard_user_metadata action="INSERT_OR_UPDATE">
+        <background_color/>
+        <cache_expiration_time>24</cache_expiration_time>
+        <card_bg_image/>
+        <created_by_user display_value="Petchiammal Iyyappan">158a98191b491e10a2a61f4d2b4bcb49</created_by_user>
+        <created_on>2024-10-10 14:17:31</created_on>
+        <dashboard display_value="Agent Dashboard">e9cab7db87019a1078147774dabb3598</dashboard>
+        <enable_data_cache>false</enable_data_cache>
+        <include_custom_insights>true</include_custom_insights>
+        <include_key_contributors>true</include_key_contributors>
+        <include_kpi_signals>true</include_kpi_signals>
+        <include_predictive_target>true</include_predictive_target>
+        <include_predictive_thresholds>true</include_predictive_thresholds>
+        <include_process_mining>true</include_process_mining>
+        <include_severity>true</include_severity>
+        <include_target>true</include_target>
+        <include_thresholds>true</include_thresholds>
+        <include_trends>true</include_trends>
+        <include_widget_notification>true</include_widget_notification>
+        <last_updated_on>2024-10-10 14:20:31</last_updated_on>
+        <po_project_id_list>[]</po_project_id_list>
+        <refresh_information>false</refresh_information>
+        <refresh_interval/>
+        <requested_by_user/>
+        <schedule_repetition>false</schedule_repetition>
+        <show_insights_panel>true</show_insights_panel>
+        <sys_class_name>par_dashboard_user_metadata</sys_class_name>
+        <sys_created_by>Petchiammal</sys_created_by>
+        <sys_created_on>2024-10-10 14:17:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>edca3fdb87019a1078147774dabb3537</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>par_dashboard_user_metadata_edca3fdb87019a1078147774dabb3537</sys_update_name>
+        <sys_updated_by>Petchiammal</sys_updated_by>
+        <sys_updated_on>2024-10-10 14:20:31</sys_updated_on>
+        <updated_by_user display_value="Petchiammal Iyyappan">158a98191b491e10a2a61f4d2b4bcb49</updated_by_user>
+        <use_custom_tab_colors>false</use_custom_tab_colors>
+    </par_dashboard_user_metadata>
+</record_update>

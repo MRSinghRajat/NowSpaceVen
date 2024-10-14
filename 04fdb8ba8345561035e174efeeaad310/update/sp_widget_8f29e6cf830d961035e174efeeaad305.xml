@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope, $interval, $timeout, $location ,$window) {
+    // Data for the housing types and cities
+    $scope.data = {
+        housingTypes: [
+            { name: "Rooms", icon: "fa-bed" },
+            { name: "Houses", icon: "fa-home" },
+            { name: "Apartments", icon: "fa-building" },
+            { name: "Studios", icon: "fa-tv" },
+            { name: "Student Apartments", icon: "fa-graduation-cap" },
+            { name: "All Properties", icon: "fa-building-o" }
+        ],
+        cities: [
+            { name: "Toronto", properties: 11044, image: "toronto.png" },
+            { name: "Edmonton", properties: 824, image: "vancouver.png" },
+            { name: "Montreal", properties: 3397, image: "montreal.png" },
+            { name: "Ottawa", properties: 547, image: "ottawa.png" },
+            { name: "Vancouver", properties: 814, image: "vancouver.png" },
+            { name: "Calgary", properties: 1200, image: "calgary.png" },
+            { name: "Quebec City", properties: 640, image: "quebec.png" },
+            { name: "Halifax", properties: 980, image: "montreal.png" }
+        ]
+    };
+
+    // Function to handle redirection based on clicked item
+    $scope.goToListing = function(type, value) {
+        var url = 'space?id=listing_page'+'&'  + '=' + encodeURIComponent(value)+'_blank';
+        $window.ope( url, '_blank');
+    };
+
+    // Scrolling functionality (remains unchanged)
+    var carousel = document.getElementById('cityCarousel');
+    var scrollAmount = 250; // Width of each city card
+    var autoScrollInterval;
+    
+    // Function to scroll carousel manually
+    $scope.scrollCarousel = function(direction) {
+        if (direction === 1) {
+            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        } else {
+            carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        }
+        resetAutoScroll(); // Reset auto-scroll after manual interaction
+    };
+    
+    // Auto Scroll Carousel
+    function startAutoScroll() {
+        autoScrollInterval = $interval(function() {
+            var maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+            if (carousel.scrollLeft >= maxScrollLeft) {
+                carousel.scrollLeft = 0; // Loop back to the start
+            } else {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }, 5000); // Scroll every 3 seconds
+    }
+    
+    // Start auto-scrolling initially
+    startAutoScroll();
+    
+    // Function to reset auto-scroll after manual interaction
+    function resetAutoScroll() {
+        $interval.cancel(autoScrollInterval);
+        $timeout(function() {
+            startAutoScroll();
+        }, 3000); // Resume auto-scroll after 5 seconds of inactivity
+    }
+
+    // Stop auto-scroll on hover, resume on mouse leave
+    carousel.addEventListener('mouseover', function() {
+        $interval.cancel(autoScrollInterval);
+    });
+    carousel.addEventListener('mouseout', function() {
+        resetAutoScroll();
+    });
+}
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Wrapper for consistent layout */
+.wrapper {
+    width: 100%;
+    max-width: 1300px; /* Or any desired width */
+    margin: 0 auto; /* Center the wrapper */
+    padding: 0 20px; /* Optional padding for responsiveness */
+}
+
+/* Housing Section */
+.housing-section {
+    margin-bottom: 30px;
+    padding: 20px 0; /* Add consistent padding */
+}
+
+.housing-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.housing-types {
+    display: flex;
+    justify-content: flex-start; /* Align the items to the left */
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.housing-type {
+    background-color: #e9ecef;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: left; /* Left-align text inside housing type */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Left-align icons and text */
+    gap: 10px;
+}
+
+.housing-type i {
+    font-size: 24px;
+    color: #007bff;
+    transition: transform 0.3s ease; /* Smooth transition for icon */
+}
+
+.housing-type span {
+    font-size: 16px;
+    color: #333;
+}
+
+.housing-type:hover {
+    background-color: #e9ecef;
+}
+
+.housing-type:hover i {
+    transform: scale(1.2); /* Icon grows slightly when hovered */
+}
+
+/* City Section */
+.city-section {
+    width: 100%;
+    padding: 20px 0; /* Add consistent padding */
+    box-sizing: border-box;
+}
+
+.city-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ensure content aligns to the left */
+    width: 100%;
+}
+
+.city-carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 0;
+    width: calc(100% - 80px);
+}
+
+.city-card {
+    min-width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.city-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.city-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.city-info h3 {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.city-info p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
+
+.city-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    color: #ff4d4d;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.carousel-container button:hover {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>NowSpace House Category</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 13:43:12</sys_created_on>
+        <sys_id>8f29e6cf830d961035e174efeeaad305</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>NowSpace House Category</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_widget_8f29e6cf830d961035e174efeeaad305</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 15:44:04</sys_updated_on>
+        <template><![CDATA[<div class="wrapper">
+    <div class="housing-section">
+        <h2>What housing in Canada suits your needs?</h2>
+        <div class="housing-types">
+            <div class="housing-type" ng-repeat="type in data.housingTypes">
+              <!--space?id=listing_page&type={{type.name}}-->
+                <a ng-href="space?id=listing_page&type={{type.name}}" target="_blank">
+                    <i class="fa {{type.icon}}"></i>
+                    <span>{{type.name}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="city-section">
+        <h2>Popular cities for rental housing</h2>
+        <div class="carousel-container">
+            <button class="prev-btn" ng-click="scrollCarousel(-1)">←</button>
+            <div class="city-carousel" id="cityCarousel">
+                <div class="city-card" ng-repeat="city in data.cities">
+                  <!--space?id=listing_page&city={{city.name}}-->
+                    <a ng-href="space?id=listing_page&city={{city.name}}" target="_blank">
+                        <img ng-src="{{city.image}}" alt="{{city.name}}">
+                        <div class="city-info">
+                            <h3>{{city.name}}</h3>
+                            <p>{{city.properties}} Properties</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="next-btn" ng-click="scrollCarousel(1)">→</button>
+        </div>
+    </div>
+</div>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>8f29e6cf830d961035e174efeeaad305</id>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 13:43:11</sys_created_on>
+        <sys_id>3c59ee43834d961035e174efeeaad336</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 13:43:11</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

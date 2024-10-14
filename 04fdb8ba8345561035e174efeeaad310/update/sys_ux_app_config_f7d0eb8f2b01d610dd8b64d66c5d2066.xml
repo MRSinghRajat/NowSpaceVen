@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_config">
+    <sys_ux_app_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <custom_icon>7a616fcf8301d61035e174efeeaad3b8</custom_icon>
+        <default_route_type/>
+        <description/>
+        <disable_auto_reflow>false</disable_auto_reflow>
+        <encode_query_string>true</encode_query_string>
+        <icon/>
+        <landing_path>home</landing_path>
+        <name>Now Space App Config</name>
+        <prefetch_limits/>
+        <sys_class_name>sys_ux_app_config</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 17:45:53</sys_created_on>
+        <sys_id>f7d0eb8f2b01d610dd8b64d66c5d2066</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Now Space App Config</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sys_ux_app_config_f7d0eb8f2b01d610dd8b64d66c5d2066</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 17:48:25</sys_updated_on>
+    </sys_ux_app_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=f7d0eb8f2b01d610dd8b64d66c5d2066"/>
+</record_update>

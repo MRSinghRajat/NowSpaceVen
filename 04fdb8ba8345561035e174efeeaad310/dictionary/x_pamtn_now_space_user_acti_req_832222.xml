@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="24a3ed978389d61035e174efeeaad371" extends="user_activation_request" label="Now Space User Acti Req 832222" max_length="40" name="x_pamtn_now_space_user_acti_req_832222" type="collection"/>
+</database>

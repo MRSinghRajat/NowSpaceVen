@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="Record Producer for Prospective Renters">6fef401f8305d61035e174efeeaad382</sc_cat_item>
+        <sc_category display_value="NowSpace">7b5511d387815a1078147774dabb35b8</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>nakul</sys_created_by>
+        <sys_created_on>2024-10-10 02:15:06</sys_created_on>
+        <sys_id>436591d387815a1078147774dabb3522</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NowSpace.Record Producer for Prospective Renters</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sc_cat_item_category_436591d387815a1078147774dabb3522</sys_update_name>
+        <sys_updated_by>nakul</sys_updated_by>
+        <sys_updated_on>2024-10-10 02:15:06</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Space">04fdb8ba8345561035e174efeeaad310</application>
+        <file_path/>
+        <instance_id>cf03ca63ebc0d250e483f459bad0cd70</instance_id>
+        <instance_name>ven07370</instance_name>
+        <name>sc_cat_item_category_436591d387815a1078147774dabb3522</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="DELETE"><sc_cat_item display_value="Record Producer for Prospective Renters">6fef401f8305d61035e174efeeaad382</sc_cat_item><sc_category display_value="NowSpace">7b5511d387815a1078147774dabb35b8</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>nakul</sys_created_by><sys_created_on>2024-10-10 02:15:06</sys_created_on><sys_id>436591d387815a1078147774dabb3522</sys_id><sys_mod_count>0</sys_mod_count><sys_name>NowSpace.Record Producer for Prospective Renters</sys_name><sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package><sys_policy/><sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope><sys_update_name>sc_cat_item_category_436591d387815a1078147774dabb3522</sys_update_name><sys_updated_by>nakul</sys_updated_by><sys_updated_on>2024-10-10 02:15:06</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>-2045146203</payload_hash>
+        <record_name>NowSpace.Record Producer for Prospective Renters</record_name>
+        <reverted_from/>
+        <source>392c599f87815a1078147774dabb352c</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>nakul</sys_created_by>
+        <sys_created_on>2024-10-10 02:44:31</sys_created_on>
+        <sys_id>8e2c599f87815a1078147774dabb35a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192745048730000001</sys_recorded_at>
+        <sys_updated_by>nakul</sys_updated_by>
+        <sys_updated_on>2024-10-10 02:44:31</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>422c599fa6815a102c035df6badc22a8</update_guid>
+        <update_guid_history>422c599fa6815a102c035df6badc22a8:-2045146203,576591d33b815a102fd066b8d9dda126:1080707737</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="NowSpace.Record Producer for Prospective Renters">ce2c599f87815a1078147774dabb35a9</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nakul</sys_created_by>
+        <sys_created_on>2024-10-10 02:44:31</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>8e73ff1b3af7450495c0c0d7c5e7dd79</sys_id>
+        <sys_metadata>436591d387815a1078147774dabb3522</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NowSpace.Record Producer for Prospective Renters</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_scope_delete display_value="">3968138c0ac74935be7147581295b391</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_436591d387815a1078147774dabb3522</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_436591d387815a1078147774dabb3522">8e2c599f87815a1078147774dabb35a8</sys_update_version>
+        <sys_updated_by>nakul</sys_updated_by>
+        <sys_updated_on>2024-10-10 02:44:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

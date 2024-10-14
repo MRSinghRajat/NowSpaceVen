@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>NowSpace Ec Home - Container 3</name>
+        <order>3</order>
+        <semantic_tag/>
+        <sp_page display_value="nowpsace_ec_home">3b800c8f8745d61078147774dabb3562</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 16:04:03</sys_created_on>
+        <sys_id>7d23142383091a1035e174efeeaad3a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NowSpace Ec Home - Container 3</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_container_7d23142383091a1035e174efeeaad3a1</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 16:04:03</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Now Space">04fdb8ba8345561035e174efeeaad310</application>
+        <file_path/>
+        <instance_id>cf03ca63ebc0d250e483f459bad0cd70</instance_id>
+        <instance_name>ven07370</instance_name>
+        <name>sp_container_7d23142383091a1035e174efeeaad3a1</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>NowSpace Ec Home - Container 3</name><order>3</order><semantic_tag/><sp_page display_value="nowpsace_ec_home">3b800c8f8745d61078147774dabb3562</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>rajat</sys_created_by><sys_created_on>2024-10-10 16:04:03</sys_created_on><sys_id>7d23142383091a1035e174efeeaad3a1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>NowSpace Ec Home - Container 3</sys_name><sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package><sys_policy/><sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope><sys_update_name>sp_container_7d23142383091a1035e174efeeaad3a1</sys_update_name><sys_updated_by>rajat</sys_updated_by><sys_updated_on>2024-10-10 16:04:03</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>-1070946438</payload_hash>
+        <record_name>NowSpace Ec Home - Container 3</record_name>
+        <reverted_from/>
+        <source>48fdb8ba8345561035e174efeeaad314</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 16:04:03</sys_created_on>
+        <sys_id>7123142383091a1035e174efeeaad3a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>192772c45fa0000001</sys_recorded_at>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 16:04:03</sys_updated_on>
+        <type>Container</type>
+        <update_guid>7523142387091a101ab1ba5d3936e6a3</update_guid>
+        <update_guid_history>7523142387091a101ab1ba5d3936e6a3:-1070946438</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="NowSpace Ec Home - Container 3">c563182383091a1035e174efeeaad33c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 16:05:06</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>203053e0e3d24868902a2f4f4f3feff9</sys_id>
+        <sys_metadata>7d23142383091a1035e174efeeaad3a1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NowSpace Ec Home - Container 3</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_scope_delete display_value="">3968138c0ac74935be7147581295b391</sys_scope_delete>
+        <sys_update_name>sp_container_7d23142383091a1035e174efeeaad3a1</sys_update_name>
+        <sys_update_version display_value="sp_container_7d23142383091a1035e174efeeaad3a1">7123142383091a1035e174efeeaad3a4</sys_update_version>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 16:05:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

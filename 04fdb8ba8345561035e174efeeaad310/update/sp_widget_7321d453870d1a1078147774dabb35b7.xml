@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($uibModal, $scope,spModal ,$window)
+{
+	var c = this;
+	 $scope.showTab = function(tabId) {
+    // Hide all tab content
+    var tabs = document.querySelectorAll('.tab-content');
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.add('hidden');
+    }
+    // Show the selected tab
+    document.getElementById(tabId).classList.remove('hidden');
+  }
+	
+	c.onWidget = function(widgetId, widgetInput) {
+       $window.open('space?id=csm_get_help&sys_id=6fef401f8305d61035e174efeeaad382',"_blank");
+}
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>NowSpace Test</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 21:17:11</sys_created_on>
+        <sys_id>7321d453870d1a1078147774dabb35b7</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>NowSpace Test</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_widget_7321d453870d1a1078147774dabb35b7</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:55:03</sys_updated_on>
+        <template><![CDATA[<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+
+
+<div class="container mx-auto p-6">
+  <!-- Listing Header -->
+  <div class="text-center mb-8">
+    <h1 class="text-2xl font-bold">1440 GORDON Street Unit# 423</h1>
+  </div>
+
+  <!-- Main Section -->
+  <div class="flex flex-col lg:flex-row gap-8">
+    <!-- Image Gallery -->
+    <div class="lg:w-3/4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="landing.png" alt="Main Image" class="w-full h-auto rounded-lg" />
+        <div class="grid grid-cols-2 gap-2">
+          <img src="landing.png" alt="Thumbnail 1" class="w-full h-auto rounded-lg" />
+          <img src="landing.png" alt="Thumbnail 2" class="w-full h-auto rounded-lg" />
+          <img src="landing.png" alt="Thumbnail 3" class="w-full h-auto rounded-lg" />
+          <img src="landing.png" alt="Thumbnail 4" class="w-full h-auto rounded-lg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Property Details -->
+    <div class="lg:w-1/4 bg-white shadow-md rounded-lg p-4">
+      <h2 class="text-xl font-bold mb-4">$654,900</h2>
+      <p class="text-gray-600 mb-4">1440 GORDON Street Unit# 423, Guelph, Ontario N1L1C8</p>
+      <div class="flex items-center mb-4">
+        <span class="text-gray-500">2 ]]>🛏<![CDATA[ • 2 ]]>🛁<![CDATA[ • 1114 sqft</span>
+      </div>
+      <button ng-click="c.onWidget()" class="bg-blue-500 text-white px-4 py-2 rounded-lg w-full mb-4">Book Showing</button>
+    </div>
+  </div>
+
+  <!-- Tabs Section -->
+  <div class="mt-10">
+    <div class="border-b border-gray-300">
+      <nav class="flex space-x-4">
+        <button onclick="showTab('highlights')" class="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-blue-500 hover:text-blue-500">Highlights</button>
+        <button onclick="showTab('neighborhood')" class="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-blue-500 hover:text-blue-500">Neighborhood</button>
+        <button onclick="showTab('statistics')" class="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-blue-500 hover:text-blue-500">Statistics</button>
+        <button onclick="showTab('calculators')" class="py-2 px-4 text-gray-600 border-b-2 border-transparent hover:border-blue-500 hover:text-blue-500">Calculators</button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Tab Content Sections -->
+  <div id="highlights" class="tab-content mt-6 bg-white p-6 shadow-md rounded-lg">
+    <h3 class="text-lg font-bold mb-4">Listing Description</h3>
+    <p class="text-gray-600">
+      Welcome to this beautiful condo located in Guelph's vibrant South End. This 2-bedroom unit offers an abundance of natural light with modern finishes.
+      Conveniently located close to public transit, shopping centers, schools, and parks, making it ideal for families or professionals looking for a comfortable and stylish living space.
+    </p>
+  </div>
+
+  <div id="neighborhood" class="tab-content mt-6 bg-white p-6 shadow-md rounded-lg hidden">
+    <h3 class="text-lg font-bold mb-4">Neighborhood Information</h3>
+    <p class="text-gray-600">
+      The property is located in a family-friendly neighborhood with parks, schools, and easy access to public transportation. It's just a short drive to the downtown area, with plenty of shops and restaurants nearby.
+    </p>
+  </div>
+
+  <div id="statistics" class="tab-content mt-6 bg-white p-6 shadow-md rounded-lg hidden">
+    <h3 class="text-lg font-bold mb-4">Statistics</h3>
+    <p class="text-gray-600">
+      Market statistics and data will be provided here, including recent sales, price trends, and other valuable market information.
+    </p>
+  </div>
+
+  <div id="calculators" class="tab-content mt-6 bg-white p-6 shadow-md rounded-lg hidden">
+    <h3 class="text-lg font-bold mb-4">Mortgage Calculators</h3>
+    <p class="text-gray-600">
+      Use our mortgage calculators to estimate your monthly payments and determine your affordability based on interest rates and down payment.
+    </p>
+  </div>
+
+  <!-- Property Summary Section -->
+  <div class="mt-6 bg-white p-6 shadow-md rounded-lg">
+    <h3 class="text-lg font-bold mb-4">Property Summary</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <p class="text-gray-800 font-bold">Property Type</p>
+        <p class="text-gray-600">Single Family</p>
+      </div>
+      <div>
+        <p class="text-gray-800 font-bold">Building Type</p>
+        <p class="text-gray-600">Apartment</p>
+      </div>
+      <div>
+        <p class="text-gray-800 font-bold">Storeys</p>
+        <p class="text-gray-600">1</p>
+      </div>
+      <div>
+        <p class="text-gray-800 font-bold">Square Footage</p>
+        <p class="text-gray-600">1114 sqft</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Building Section -->
+  <div class="mt-6 bg-white p-6 shadow-md rounded-lg">
+    <h3 class="text-lg font-bold mb-4">Building Details</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <p class="text-gray-800 font-bold">Bedrooms</p>
+        <p class="text-gray-600">2</p>
+      </div>
+      <div>
+        <p class="text-gray-800 font-bold">Bathrooms</p>
+        <p class="text-gray-600">2</p>
+      </div>
+      <div>
+        <p class="text-gray-800 font-bold">Parking Type</p>
+        <p class="text-gray-600">Visitor Parking</p>
+      </div>
+      <div>
+        <p class="text-gray-800 font-bold">Heating Type</p>
+        <p class="text-gray-600">Forced Air</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/ng-template" id="modalTemplate">
+ <div class="panel panel-default">
+ <div class="panel-heading">
+ <h4 class="panel-title">Modal Window</h4>
+   </div>
+ <div class="panel-body wrapper-xl">
+ Hello
+   </div>
+ <div class="panel-footer text-right">
+ <button class="btn btn-primary" ng-click="c.closeModal()">${Close Modal}</button>
+ </div>
+ </div>
+</script>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>7321d453870d1a1078147774dabb35b7</id>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-09 21:17:10</sys_created_on>
+        <sys_id>4331dc93870d1a1078147774dabb3552</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-09 21:17:10</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

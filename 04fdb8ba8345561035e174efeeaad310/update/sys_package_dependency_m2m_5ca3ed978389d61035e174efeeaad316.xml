@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="External User Self-Registration" source="com.snc.external_user_self_registration">aab568ae874d161078147774dabb354c</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 03:17:10</sys_created_on>
+        <sys_id>5ca3ed978389d61035e174efeeaad316</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 03:17:10</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

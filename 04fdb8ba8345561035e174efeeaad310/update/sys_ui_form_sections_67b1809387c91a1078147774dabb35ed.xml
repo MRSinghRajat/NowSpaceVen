@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="67b1809387c91a1078147774dabb35ed" sys_domain="global" table="x_pamtn_now_space_nowspace_contracts" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>Gautam</sys_created_by>
+            <sys_created_on>2024-10-09 20:09:30</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e7b1809387c91a1078147774dabb35f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_pamtn_now_space_nowspace_contracts" name="x_pamtn_now_space_nowspace_contracts" sys_domain="global" view="bb85684e0ff33300f26f4bbb85767e82">67b1809387c91a1078147774dabb35ed</sys_ui_form>
+            <sys_ui_section caption="Contract" display_value="Contract" name="x_pamtn_now_space_nowspace_contracts" sys_domain="global" view="bb85684e0ff33300f26f4bbb85767e82">efb1809387c91a1078147774dabb35ef</sys_ui_section>
+            <sys_updated_by>Gautam</sys_updated_by>
+            <sys_updated_on>2024-10-09 20:09:30</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_pamtn_now_space_nowspace_contracts</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>Gautam</sys_created_by>
+            <sys_created_on>2024-10-09 20:09:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>67b1809387c91a1078147774dabb35ed</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_pamtn_now_space_nowspace_contracts</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+            <sys_update_name>sys_ui_form_sections_67b1809387c91a1078147774dabb35ed</sys_update_name>
+            <sys_updated_by>Gautam</sys_updated_by>
+            <sys_updated_on>2024-10-09 20:09:29</sys_updated_on>
+            <sys_user/>
+            <view display_value="Customer Portal" name="customer_portal">bb85684e0ff33300f26f4bbb85767e82</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-08 11:15:35</sys_created_on>
+        <sys_id>3cfdf8ba8345561035e174efeeaad30d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_pamtn_now_space_request.x_pamtn_now_space.agent</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_security_acl display_value="x_pamtn_now_space_request">30fdb8ba8345561035e174efeeaad3fb</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_3cfdf8ba8345561035e174efeeaad30d</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-08 11:15:35</sys_updated_on>
+        <sys_user_role display_value="x_pamtn_now_space.agent" name="x_pamtn_now_space.agent">f0fdb8ba8345561035e174efeeaad3cf</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

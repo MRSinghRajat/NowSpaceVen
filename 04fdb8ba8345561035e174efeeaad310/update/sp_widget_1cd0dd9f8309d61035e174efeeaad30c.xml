@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[(function() {
+  // Angular controller for the widget
+  data.logoText = "PACompany";
+  data.navLinks = [
+    { name: "New house", url: "#" },
+    { name: "Apartment", url: "#", active: true },
+    { name: "Construction", url: "#" },
+    { name: "My house", url: "#" },
+    { name: "Services", url: "#" }
+  ];
+})();]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>NowSpace Header</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+  data.loggedIn = !gs.getSession().isLoggedIn();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 01:57:39</sys_created_on>
+        <sys_id>1cd0dd9f8309d61035e174efeeaad30c</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>NowSpace Header</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_widget_1cd0dd9f8309d61035e174efeeaad30c</sys_update_name>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 03:26:31</sys_updated_on>
+        <template><![CDATA[<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+    <header class="bg-gray-100 p-4 shadow-lg">
+      <div ng-if="data.loggedIn" class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-2xl font-bold text-black">
+          NowSpace
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="flex-1 flex justify-center space-x-10">
+
+          <a href="#" class="text-blue-600 font-semibold border-b-2 border-blue-600">Apartment</a>
+          <a href="#" class="text-gray-800 font-semibold hover:text-blue-600">House</a>
+
+          <a href="#" class="text-gray-800 font-semibold hover:text-blue-600">Services</a>
+        </nav>
+
+        <!-- Buttons -->
+        <div class="flex space-x-1">
+          <button class="bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg flex items-center max-w-fit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+            Add a Listing
+          </button>
+          <button  class="bg-gray-200 text-gray-700 font-semibold px-6 py-2 rounded-lg">
+            <a ng-href="space?id=csp_registration" target="_blank" class="bg-gray-200 text-gray-700 font-semibold px-6 py-2 rounded-lg flex items-center">
+              Log in/Sign up
+            </a>
+
+          </button>
+        </div>
+      </div>
+    </header>
+ ]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>1cd0dd9f8309d61035e174efeeaad30c</id>
+        <sys_created_by>rajat</sys_created_by>
+        <sys_created_on>2024-10-10 01:57:20</sys_created_on>
+        <sys_id>0f5155138349d61035e174efeeaad3a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>rajat</sys_updated_by>
+        <sys_updated_on>2024-10-10 01:57:20</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

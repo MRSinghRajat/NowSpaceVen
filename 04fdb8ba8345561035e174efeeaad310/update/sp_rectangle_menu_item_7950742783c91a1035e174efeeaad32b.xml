@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rectangle_menu_item">
+    <sp_rectangle_menu_item action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <color>default</color>
+        <condition/>
+        <display_1/>
+        <display_2/>
+        <display_date/>
+        <filter/>
+        <glyph>empty</glyph>
+        <hint/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <label>FAQs</label>
+        <order>100</order>
+        <record_script/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description/>
+        <sp_page display_value="kb_category">0e461a2147132100ba13a5554ee4900e</sp_page>
+        <sp_rectangle_menu display_value="NowSpace Header Menu">ec32406783851a1035e174efeeaad304</sp_rectangle_menu>
+        <sp_rectangle_menu_item/>
+        <sys_class_name>sp_rectangle_menu_item</sys_class_name>
+        <sys_created_by>nakul</sys_created_by>
+        <sys_created_on>2024-10-10 18:12:08</sys_created_on>
+        <sys_id>7950742783c91a1035e174efeeaad32b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FAQs</sys_name>
+        <sys_package display_value="Now Space" source="x_pamtn_now_space">04fdb8ba8345561035e174efeeaad310</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Now Space">04fdb8ba8345561035e174efeeaad310</sys_scope>
+        <sys_update_name>sp_rectangle_menu_item_7950742783c91a1035e174efeeaad32b</sys_update_name>
+        <sys_updated_by>nakul</sys_updated_by>
+        <sys_updated_on>2024-10-10 18:12:08</sys_updated_on>
+        <table/>
+        <type>kb</type>
+        <url/>
+        <url_target/>
+    </sp_rectangle_menu_item>
+    <sys_translated_text action="delete_multiple" query="documentkey=7950742783c91a1035e174efeeaad32b"/>
+</record_update>
